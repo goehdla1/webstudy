@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table : padding </title>
+<style type="text/css">
+	table, th, td {
+		border: 2px solid black;
+	}
+	table{
+		width: 700px;
+		margin: auto;
+		border-spacing: 20px; /* td(th)와 td(th)간격 */
+		border-collapse: collapse; 
+	}
+	th, td{
+		text-align: center;
+		padding: 20px 0px;   /* td(th)와 텍스트 간격  */
+	}
+</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>유채방</td><td>여성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>동성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>가족</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>장미방</td><td>누구나</td><td>2인실</td><td>1인 20,000원</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>

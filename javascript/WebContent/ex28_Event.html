@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<script type="text/javascript">
+	function test1() {
+		document.getElementById("demo1").innerHTML = "<h2>ICT 인재 개발원</h2>"; 
+	}
+	function test2() {
+		document.getElementById("demo2").style.display="none";
+	}
+	function test3() {
+		document.getElementById("demo3").style.fontSize="45px";
+	}
+	function test4() {
+		var str = document.getElementById("fname").value
+		document.getElementById("fname").value = str.toUpperCase();
+	}
+</script>
+</head>
+<body>
+	<h2> id 선택자를 활용한 이벤트 </h2>
+	<p id="demo1"></p>
+	<p id="demo2">Hello World</p>
+	<p id="demo3">서울시 마포구 서교동</p>
+	<!-- onchange() 는 Enter를 눌러야 실행된다. 
+	  input type="text" 의 입력내용이 value가 된다.-->
+	Enter your name : <input type="text" id="fname" onchange="test4()"><br>
+	<hr>
+	<button onclick="test1()">클릭</button>
+	<button onclick="test2()">클릭</button>
+	<button onclick="test3()">클릭</button>
+</body>
+</html>

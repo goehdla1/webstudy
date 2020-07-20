@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.box{
+		border: 1px solid black;
+		width: 300px;
+		height: 300px;
+		margin: auto;
+		text-align: center;
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+	function setRed() {
+		document.getElementById("b1").style.display="block";
+		document.getElementById("b2").style.display="none";
+		document.getElementById("b3").style.display="none";
+	}
+	function setGreen() {
+		document.getElementById("b1").style.display="none";
+		document.getElementById("b2").style.display="block";
+		document.getElementById("b3").style.display="none";
+	}
+	function setBlue() {
+		document.getElementById("b1").style.display="none";
+		document.getElementById("b2").style.display="none";
+		document.getElementById("b3").style.display="block";
+	}
+</script>
+</head>
+<body>
+	<div style="margin: auto; width: 300px; padding: 20px">
+		<button onclick="setRed()">RED</button>
+		<button onclick="setGreen()">GREEN</button>
+		<button onclick="setBlue()">BLUE</button>
+	</div>
+	<div class="box" id="b1" style="background-color: red;">BOX1</div>
+	<div class="box" id="b2" style="background-color: green;">BOX2</div>
+	<div class="box" id="b3" style="background-color: blue;">BOX3</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sibling : 형제태그</title>
+<style type="text/css">
+	p{color: red;}
+	div p{background-color: skyblue;} 
+	div > p{background-color: yellow; }
+	div + p {background-color: blue;}
+	div ~ p {background-color: orange;}
+</style>
+</head>
+<body>
+<!-- *: 모든 태그, .(점):클래스, #:아이디 
+	 공백:자손,  > 자식
+	 +: 인접한 형제 태그(next),  ~ 일반 태그(형제태그모두(next))  
+ -->
+ <p> ICT 인재 개발원 </p>
+ <div>
+ 	<p> ICT 인재 개발원1 </p>
+ 	<p> ICT 인재 개발원2 </p>
+ 	<section>
+ 		<p> ICT 인재 개발원2-1 </p>
+ 	</section>
+ 	<p> ICT 인재 개발원3 </p>
+ </div>
+ <p> ICT 인재 개발원 </p>
+ <p> ICT 인재 개발원 </p>
+</body>
+</html>
+
+
+

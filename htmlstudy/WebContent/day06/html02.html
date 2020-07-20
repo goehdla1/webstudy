@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+</head>
+<body>
+<!--
+	form : 사용자의 정보를 받아 들이고 원하는 페이지(서버페이지)로 정보를 보내는데 사용
+	<form action="" method="" enctype="">
+	   form elements(폼요소들)
+	</form>
+	1. action = "정보가 전달되는 페이지(경로) 표시"
+	2. method = "정보 전달 방식"
+	   - get (생략) : 정보를 head에 담는다. 주소창에 보인다.속도는 빠르다, 적은 양, 보안에 취약
+	   - post       : 정보를 body에 담는다. 주소창에서는 보이지 않는다. 많은 양, get방식보다는 느리다.
+	3. enctype => 평소에는 생략, 업로드할때만 사용
+	
+	4. form elements(태그) : input, label, select, textarea, datalist,
+	                         fieldset, legend
+	   input type의 속성들 : text, button, radio, checkbox, file, hidden
+	                         number, password, reset, submit, 
+	                         tel, color, date, email, time, url, week,
+	                         range, search,....
+	   input type 속성 중 name속성은 데이터전달 될때 사용되는 name 이다.
+	   input type 속성 중 value속성은 데이터전달 될때 사용되는 value 이다.
+	   
+	   ** 같은이름이 여러개인 경우 : 파라미터처리에서는 배열처리해야 된다.
+	   ** radio 이나 checkbox : checked는 선택 표시가 되었다는 뜻이다.
+	   ** select : selected라도 속성 지정하면 해당 option이 선택 되었다는 뜻
+	               size 속성은 화면에 표시되는 갯수
+	               multiple 속성은 ctrl 키를 이용해서 여러개 선택 가능
+       ** reset 속성은 form 태그안에 입력한 기존 정보들을 삭제 (버튼형태) 
+       ** submit 속성은 form 정보를 action이 지정한 페이지로 전달(버튼형태) 
+       ** 자바스트립트전까지는 submit 속성 사용
+       ** 자바스트립트에서는 input type=button 속성에 onclick를 이용해서 정보 전달
+       ** 보통 onXXX는 자바스크립트 호출을 말한다.
+       ** disabled : 커서가 들어가지 않아서 입력할 수 없다. 
+       ** readonly : 오직 읽기만 가능 , 수정 안됨                                                          
+	   ** size : 입력필드(input type)의 크기 지정(글자길이가아니다, 더 입력할 수 있다.)
+       ** maxlength : 입력필드에 허용하는 최대 글자 수
+       ** placehoder : 입력필드에 힌트 표시	 
+       ** pattern = [0-9(숫자만)]{3(자릿수)}  
+                    [A-Za-z(대소문자)]{3(자릿수)}
+                    [a-z(소문자)]{3(자릿수)}
+                   ex)[0-9]{3}-[0-9]{4}-[0-9]{4}
+  -->
+  <form action="html02.html">
+  	<p><label>아이디 :</label>
+  	     <!-- type="text" 한 줄 입력, 사용자가 입력한 정보가 value가 된다. -->
+  	   <input type="text" name="id" placeholder="아이디입력하세요"></p>
+  	<p>패스워드 : 
+  	<!-- type="password" 한 줄 입력,사용자가 입력한 정보가 value가 된다. 
+  	     입력정보가 ●●●● 표시된다.  -->
+  	<input type="password" name="pw" placeholder="패스워드 입력하세요"></p>  
+  	<p>이름 : <input type="text" name="name"  placeholder="이름입력"></p>
+  	<p>나이 : <input type="number" name="age"  placeholder="나이입력"></p>
+  	
+  	<!-- radio, checkbox, select 등 은 value를 직접 입력해야 한다. -->
+  	<p>성별 : <input type="radio" name="gender" value="1" >남성
+  	          <input type="radio" name="gender" value="2">여성
+  	</p>
+  	<!-- 드롭다운 목록 (value속성을 지정하지 않아도 된다.) -->
+  	<p> 거주지 : <select name="addr"> <!-- 하나만 선택 -->
+  	  			   <option>::선택하세요::</option>
+	               <option value="1">서울</option>		  	
+  	 			   <option >경기</option>
+  	 			   <option>제주</option>
+  	 			   <option>해외</option>	
+  				 </select>
+  	</p>
+  	<p> 브라우저 :  <!--먼저 input 요소 list="이름지정"  -->
+  	                <input list="browsers" name="browsers">  
+  					<datalist id="browsers"> <!-- 하나만 선택 -->
+  					<!-- value 생략  -->
+		               <option>크롬</option>		  	
+	  	 			   <option>익스플로러</option>
+	  	 			   <option>파이어폭스</option>
+	  	 			   <option>사파리</option>	
+  				    </datalist>
+  	</p>
+  	<!-- 하나의 이름에 여러개 값을 전달(받는곳에서는 배열처리)  -->
+  	<p> 취미 : <input type="checkbox" name="hobby" value="운동">운동 
+  	           <input type="checkbox" name="hobby" value="게임">게임 
+  	           <input type="checkbox" name="hobby" value="독서">독서 
+  	           <input type="checkbox" name="hobby" value="영화">영화   
+  	</p>
+  	<p> 프로그래밍 : <select name="program" multiple size="6">
+  						<option>자바</option>
+  						<option>오라클</option>
+  						<option>HTML_CSS</option>
+  						<option>서블릿</option>
+  						<option>JSP</option>
+  						<option>안드로이드</option>
+  					 </select>
+  	</p>
+  	<!-- 파일 업로드 할때 사용 -->
+    <p>*파일 : <input type="file" name="file"> </p>
+    <p>*날짜 : <input type="date" name="date"> </p>
+    <p>컬러 : <input type="color" name="color"> </p>
+    <p>시간 : <input type="time" name="time"> </p>
+    <p>범위 : <input type="range" name="range"> </p>
+    <!-- 숫자로만 11자리 입력 --> 
+    <p>*전화 : <input type="tel"  name="tel" pattern="[0-9]{11}" required></p>	
+    <p>*자기소개서<br>
+        <textarea rows="5" cols="25"></textarea>
+    </p>
+    <!-- 화면에는 안보이고 이름과 값을 넘길때 사용  -->
+    <input type="hidden" name="page" value="108">
+    				
+  	<!-- reset,submit의 value는 버튼모양의 글자를 말한다.  -->
+  	<p><input type="reset" value="취소"></p>
+  	<p><input type="submit" value="보내기"></p>
+  </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

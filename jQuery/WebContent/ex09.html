@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>효과 - fadeIn and fadeOut</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// $(selector).fadeIn(),$(selector).fadeIn(speed) 
+	// $(selector).fadeOut(),$(selector).fadeOut(speed)
+	// $(selector).fadeToggle(),$(selector).fadeToggle(speed)
+	// $(selector).fadeTo(),$(selector).fadeTo(speed,opacity)
+	// => speed 숫자(400=기본값), 문자지정("fast", "slow")
+	$(function() {
+		$("#p1").click(function () {
+			$("#img").fadeOut("slow");
+		});
+		$("#p2").click(function () {
+			$("#img").fadeIn("slow");
+		});
+		
+		var i = 1 ;
+		$("#p3").click(function () {
+			if(i%2==0){
+			   $(this).text("감추기");
+			}else{
+			   $(this).text("보이기");
+			}
+			++i;			
+			$("#img").fadeToggle("slow");
+		});
+		
+		var j = 1 ;
+		$("#p4").click(function () {
+			if(j%2==0){
+			   $(this).text("감추기");
+			   $("#img").fadeTo("slow",0.9);
+			}else{
+			   $(this).text("보이기");
+			   $("#img").fadeTo("slow",0.2);
+			}
+			++j;			
+			
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="p1"> 감추기</button>
+	<button id="p2"> 보이기</button>
+	<button id="p3"> 감추기</button>
+	<button id="p4"> 감추기</button><br><br><br>
+	<img id="img" alt="" src="images/pic_bulboff.gif">
+	<p> Hello World</p>
+</body>
+</html>

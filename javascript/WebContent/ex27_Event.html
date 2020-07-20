@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event : onclick</title>
+<script type="text/javascript">
+	function test1() {
+		var now = new Date();
+		var s = now.getFullYear()+". " + (now.getMonth()+1)+". "+now.getDate()+
+		      ". "+ now.getHours()+" : "+now.getMinutes()+" : " + now.getSeconds();
+		 document.getElementById("clock1").innerHTML = s ;
+		 setTimeout("test1()",1000);
+	}
+	function test2() {
+		document.getElementById("clock2").innerHTML = new Date();
+		setTimeout("test2()",1000);
+	}
+	function test3() {
+		setInterval(() => {
+			var d = new Date();
+			var n = d.toLocaleTimeString();
+			document.getElementById("clock3").innerHTML = n;
+		}, 1000);
+	}
+</script>
+</head>
+<body>
+<h2><span id="clock1"></span></h2>
+<h2><span id="clock2"></span></h2>
+<h2><span id="clock3"></span></h2>
+<hr>
+<button onclick="test1()">시계1</button>
+<button onclick="test2()">시계1</button>
+<button onclick="test3()">시계1</button>
+</body>
+</html>

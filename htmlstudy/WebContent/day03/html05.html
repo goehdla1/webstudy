@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image Map</title>
+</head>
+<body>
+	<!--
+	   이미지맵 : 하나의 이미지에 여러개의 구역을  나누어서 여러 개의 링크 설정
+	  -->
+	  <!-- 1단계 : 해당 이미지에 usemap 속성부여  -->
+	  <a href="http://www.ictedu.co.kr">
+	  	<img src="../images/workplace.jpg" usemap="#imgmap">
+	  </a> 
+	  
+	  <!-- 2단계 : map 태그안에 area태그를 만들어서 영역을 잡는다. -->
+	  <map name="imgmap">
+	  		<!-- 영역잡는 모양은 사각형과 원  -->
+	  		<!-- 사각형 (시작x,y, 끝x,y) -->
+	  		<area shape="rect" coords="30,40,275,350" href="https://www.naver.com">
+	  		<area shape="rect" coords="290,170,335,250" href="https://www.daum.net">
+	  		<!-- 원형 (중심위치x,y,반지름) -->
+	  		<area shape="circle" coords="345,295,40" href="https://www.google.com">
+	  </map>
+</body>
+</html>

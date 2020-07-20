@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table : rowspan, colspan (합치기)</title>
+<style type="text/css">
+	table, th, td {
+		border: 2px solid black;
+	}
+	table{
+		margin: auto;
+		width: 700px;
+	}
+	td{
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<!-- rowspan : 행 합치기, colspan : 열 합치기 
+	     합치기를 실행하면  왼쪽, 위쪽이 살아남아서 합치기를 한다.  -->
+	<table>
+		<thead>
+			<tr><th>1행1열</th><th>1행2열</th><th>1행3열</th><th>1행4열</th></tr>
+		</thead>
+		<tbody>
+			<tr><td colspan="2">2행1열</td><td>2행3열</td><td rowspan="3">2행4열</td></tr>
+			<tr><td>3행1열</td><td rowspan="2" colspan="2">3행2열</td></tr>
+			<tr><td>4행1열</td></tr>
+		</tbody>
+		<tfoot>
+			<tr><td colspan="4">5행1열</td></tr>
+		</tfoot>
+	</table>
+	<hr>
+	<table>
+		<thead>
+			<tr><th>방 이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>유채방</td><td>여성</td><td rowspan="3">4인실</td><td rowspan="4">1인 20,000원</td></tr>
+			<tr><td rowspan="2">동백방</td><td>동성</td></tr>
+			<tr><td>가족</td></tr>
+			<tr><td>천혜향방</td><td>누구나</td><td>2인실</td></tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>

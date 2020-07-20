@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>addClass</title>
+<style type="text/css">
+	.bg{background-color: yellow;}
+	.fg{color: red;}
+	.horizental{
+		float: left;
+		list-style: none;
+		margin: 20px;
+	}
+</style>
+<!-- CDN : 웹 상에서 jQeury 라이브러리 제공 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("li").addClass("bg");
+		
+		$(".s").addClass("fg");
+		
+		$("#sp").addClass("fg");
+		
+		$("ul>li").addClass("horizental")
+		
+		$("ol li").addClass("horizental")
+	});
+</script>
+</head>
+<body>
+	<h2>
+		<ul id="menu1">
+			<li><u>java</u></li>
+			<li>html&css</li>
+			<li class="s">servlet&jsp</li>
+			<li id="sp">spring</li>
+		</ul>
+		
+		<ol id="menu2">
+			<li><u>android</u></li>
+			<li>iphone</li>
+			<li class="s">window <u>phone</u></li>
+			<li id="mo">mobile</li>
+		</ol>
+	</h2>
+</body>
+</html>

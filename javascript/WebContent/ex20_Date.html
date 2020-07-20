@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 클래스</title>
+<script type="text/javascript">
+	document.write("<h3>");
+    document.write("날짜 : " + new Date() + "<br>");
+    document.write("<hr>");
+    
+    // .toDateString()는 보기 쉬운 날짜 형식으로 변경
+    document.write("날짜 : " + new Date().toDateString() + "<br>");
+                                   // 월 => 00-11  
+    document.write("날짜 : " + new Date(2020,06,09).toDateString() + "<br>");
+    document.write("날짜 : " + new Date("2020/07/10").toDateString() + "<br>");
+    document.write("날짜 : " + new Date("2020-07-11").toDateString() + "<br>");
+    document.write("<hr>");
+    
+    // 년,월,일,시,분,초,요일 별도로 구하기
+     document.write("날짜 : " + new Date().toDateString() + "<br>");
+     document.write("날짜(년) : " + new Date().getFullYear() + "<br>");
+     document.write("날짜(월) : " + (new Date().getMonth()+1) + "<br>");
+     document.write("날짜(일) : " + new Date().getDate() + "<br>");
+     document.write("날짜(시) : " + new Date().getHours() + "<br>");
+     document.write("날짜(분) : " + new Date().getMinutes() + "<br>");
+     document.write("날짜(초) : " + new Date().getSeconds() + "<br>");
+     // 일요일 => 0 , 토요일=>6
+     document.write("날짜(요일) : " + new Date().getDay() + "<br>");
+    document.write("</h3>");
+</script>
+</head>
+<body>
+</body>
+</html>

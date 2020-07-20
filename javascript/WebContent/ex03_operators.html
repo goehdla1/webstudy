@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Operators </title>
+<script type="text/javascript">
+
+	var s1 = 7 ;
+	var s2 = 2 ;
+	// 산술연산자 : +,-,*,/,%
+	document.write("<h2>산술연산자</h2>");
+	document.write("<h3>");
+	document.write(s1 + " + " + s2 + " = " + (s1+s2)+"<br>");
+	document.write(s1 + " - " + s2 + " = " + (s1-s2)+"<br>");
+	document.write(s1 + " * " + s2 + " = " + (s1*s2)+"<br>");
+	document.write(s1 + " / " + s2 + " = " + (s1/s2)+"<br>");
+	document.write(s1 + " % " + s2 + " = " + (s1%s2)+"<br>");
+	document.write("</h3>");
+	document.write("<hr>");
+	
+	// 관계연산 : >, >=, <, <=, ==, !=  : 결과는 boolean, 조건식에 사용 
+	document.write("<h2>관계연산자</h2>");	
+	document.write("<h3>");
+	document.write(s1 + " > " + s2 + " = " + (s1>s2)+"<br>");
+	document.write(s1 + " >= " + s2 + " = " + (s1>=s2)+"<br>");
+	document.write(s1 + " < " + s2 + " = " + (s1<s2)+"<br>");
+	document.write(s1 + " <= " + s2 + " = " + (s1<=s2)+"<br>");
+	document.write(s1 + " == " + s2 + " = " + (s1==s2)+"<br>");
+	document.write(s1 + " != " + s2 + " = " + (s1!=s2)+"<br>");
+	document.write("</h3>");
+	document.write("<hr>");
+	
+	document.write("<h2>관계연산자 주의사항</h2>");	
+	s1 = 1000;
+	s2 = '1000';
+	document.write("<h3>");
+	document.write(s1 + " == " + s2 + " = " + (s1==s2)+"<br>");
+	document.write(s1 + " != " + s2 + " = " + (s1!=s2)+"<br>");
+   
+	s1 = true;
+	s2 = 1;
+	document.write(s1 + " == " + s2 + " = " + (s1==s2)+"<br>");
+	document.write(s1 + " != " + s2 + " = " + (s1!=s2)+"<br>");
+	
+	s1 = false;
+	s2 = 0;
+	document.write(s1 + " == " + s2 + " = " + (s1==s2)+"<br>");
+	document.write(s1 + " != " + s2 + " = " + (s1!=s2)+"<br>");
+	document.write("</h3>");
+	document.write("<hr>");
+	
+	document.write("<h2>관계연산자 주의사항 해결방법</h2>");	
+	// 일치연산자를 사용한다. (===) 자료형과 값이 모두 일치해야만 true
+	s1 = 1000;
+	s2 = '1000';
+	document.write("<h3>");
+	document.write(s1 + " == " + s2 + " = " + (s1==s2)+"<br>");
+	document.write(s1 + " === " + s2 + " = " + (s1===s2)+"<br>");
+   
+	s1 = true;
+	s2 = 1;
+	document.write(s1 + " == " + s2 + " = " + (s1==s2)+"<br>");
+	document.write(s1 + " === " + s2 + " = " + (s1===s2)+"<br>");
+	
+	s1 = false;
+	s2 = 0;
+	document.write(s1 + " == " + s2 + " = " + (s1==s2)+"<br>");
+	document.write(s1 + " === " + s2 + " = " + (s1===s2)+"<br>");
+	document.write("</h3>");
+	document.write("<hr>");
+	
+	// 논리연산 : &&(AND), ||(OR), !(NOT)
+	document.write("<h2>논리연산자</h2>");	
+	document.write("<h3>");
+	s1 = true;
+	s2 = false;
+	document.write("AND 조건: 거짓만나면 결과는 거짓<br>")
+	document.write(s1 + " && " + s1 + " = " + (s1&&s1)+"<br>");
+	document.write(s1 + " && " + s2 + " = " + (s1&&s2)+"<br>");
+	document.write(s2 + " && " + s1 + " = " + (s2&&s1)+"<br>");
+	document.write(s2 + " && " + s2 + " = " + (s2&&s2)+"<br>");
+	document.write("<hr>");
+	
+	document.write("OR 조건: 참만나면 결과는 참<br>")
+	document.write(s1 + " || " + s1 + " = " + (s1||s1)+"<br>");
+	document.write(s1 + " || " + s2 + " = " + (s1||s2)+"<br>");
+	document.write(s2 + " || " + s1 + " = " + (s2||s1)+"<br>");
+	document.write(s2 + " || " + s2 + " = " + (s2||s2)+"<br>");
+	document.write("</h3>");
+	document.write("<hr>");
+	
+	// 증감연산자 : ++변수, 변수++, --변수, 변수--
+	document.write("<h2>증감연산자</h2>");	
+	document.write("<h3>");
+	s1 = 10 ;
+	s2 = 10 ;
+	document.write("s1 = " + ++s1 + "<br>");
+	document.write("s2 = " + s2++ + "<br>");
+	
+	document.write("s1 = " + s1 + "<br>");
+	document.write("s2 = " + s2 + "<br>");
+	
+	document.write("</h3>");
+	document.write("<hr>");
+	
+	// 대입연산자 : +=, -=, *=, /=, %=
+	document.write("<h2>대입연산자</h2>");	
+	document.write("<h3>");
+	s1 = 14 ;
+	document.write("s1 += 3  => " + (s1 += 3) + "<br>");
+	document.write("s1 -= 3  => " + (s1 -= 3) + "<br>");
+	document.write("s1 *= 3  => " + (s1 *= 3) + "<br>");
+	document.write("s1 /= 3  => " + (s1 /= 3) + "<br>");
+	document.write("s1 %= 3  => " + (s1 %= 3) + "<br>");
+	document.write("</h3>");
+	document.write("<hr>");	
+	
+	// 삼항연산자 : var 변수 = 조건식? 참일때: 거짓일때	
+	document.write("<h2>삼항연산자</h2>");	
+	document.write("<h3>");
+    // s1 이 80이상이면 합격 아니면 불합격
+	 s1 = 84;
+	 var result = (s1>=80)?"합격":"불합격";
+	 document.write("당신은 "+ result + "입니다.<br>");
+	 
+    // s1이 짝수인지 홀수인지 판단
+	 s1 = 37;
+	 result = (s1%2==0)?"짝수":"홀수";
+	 document.write(s1 + "은(는) "+ result + "입니다.<br>");
+	// 근무시간이 8시간까지는 8950원, 8시간 초과하면 초과한 시간만큼은 1.5배 지급
+    var time = 10 ;
+	var dan = 8950;
+	
+    result = (time>8)?(8*dan)+((time-8)*dan*1.5)     : (time*dan);
+    document.write("당신의 알바비는 "+ result + "입니다.<br>");
+    
+	document.write("</h3>");
+	document.write("<hr>");
+</script>
+</head>
+<body>
+</body>
+</html>

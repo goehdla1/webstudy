@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>padding 안쪽 여백</title>
+<style type="text/css">
+	/* 
+	div{
+		padding: 30px;
+		border: 1px solid black;
+	}
+	 */
+	div.mydiv1{
+		width: 400px;
+		background-color: olive;
+	}
+	div.mydiv2{
+		width: 400px;
+		padding:50px;
+		background-color: orange;
+	}
+	/* width를 주고 padding를 주면 당연히 더 늘어난다.
+		이때, width의 크기를 변화 시키지 않으려면 
+		box-sizing:border-box; 속성 적용  */
+	div.mydiv3{
+		width: 400px;
+		padding:50px;
+		box-sizing:border-box;
+		background-color: silver;
+	}
+</style>
+</head>
+<body>
+	<h2> padding 연습 </h2>
+	<div> padding 연습 padding 연습 padding 연습 padding 연습 padding 연습</div>
+	<div class="mydiv1"> padding 연습 padding 연습 padding 연습 padding 연습 padding 연습</div>
+	<div class="mydiv2"> padding 연습 padding 연습 padding 연습 padding 연습 padding 연습</div>
+	<div class="mydiv3"> padding 연습 padding 연습 padding 연습 padding 연습 padding 연습</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function TrunOn() {
+		document.getElementById("img").src="images/pic_bulbon.gif";
+	}
+	function TrunOff() {
+		document.getElementById("img").src="images/pic_bulboff.gif";
+	}
+	
+	function TrunOn2() {
+		document.getElementById("img2").src="images/pic_bulbon.gif";
+	}
+	function TrunOff2() {
+		document.getElementById("img2").src="images/pic_bulboff.gif";
+	}
+	function viewon() {
+		document.getElementById("img3").style.display="block";
+	}
+	function viewout() {
+		document.getElementById("img3").style.display="none";
+	}
+</script>
+</head>
+<body>
+	<div style="margin: auto; width: 100px;">
+		<p><img id="img" src="images/pic_bulboff.gif"> </p>
+		<p> <button onclick="TrunOn()">켜기</button>
+		    <button onclick="TrunOff()">끄기</button>
+		</p>
+		<br>
+		<span onmouseover="TrunOn2()" onmouseout="TrunOff2()">
+			<img id="img2" src="images/pic_bulboff.gif">
+		</span>
+		<br><br><br><br><br>
+		<p onmouseover="viewon()" onmouseout="viewout()">안녕하세요</p>
+			<img id="img3" src="images/pineapple.jpg" style="display: none;">
+	</div>
+	
+</body>
+</html>
+
+
+
+

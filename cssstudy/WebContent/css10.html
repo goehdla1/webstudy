@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>list를 이용한 메뉴</title>
+<style type="text/css">
+	ul.menu{
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	ul.menu  a{
+		background-color: tomato;
+		float: left;
+		color: white;
+		text-align: center;
+		padding: 20px  40px;
+		text-decoration: none;
+	}
+    ul.menu a:hover {
+	    background-color: white;
+	    color: tomato;
+	    font-weight: bold;
+    }	
+
+</style>
+</head>
+<body>
+	<h1> list를 이용한 메뉴 </h1>
+	<ol>
+		<li>Coffed</li>
+		<li>Tea</li>
+		<li>Cola</li>
+	</ol>
+	
+	<ul>
+		<li>Coffed</li>
+		<li>Tea</li>
+		<li>Cola</li>
+	</ul>
+	
+	<ul class="menu">
+		<li><a href="#">Coffed</a></li>
+		<li><a href="#">Tea</a></li>
+		<li><a href="#">Cola</a></li>
+	</ul>
+</body>
+</html>

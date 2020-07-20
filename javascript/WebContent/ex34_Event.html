@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myFunction() {
+		var text ;
+		var x = document.getElementById("numb").value ;
+		// alert(x);
+		/*
+		if(x < 1 || x >10){
+			alert("잘못입력하셨습니다.");
+			return;
+		}
+		*/
+		if( x >= 110 && x<=10){
+			alert("제대로 입력.");
+			return;
+		}else{
+			alert("잘못입력하셨습니다.");
+			document.getElementById("numb").value = ""; // 기존내용 지우기
+			document.getElementById("numb").focus();    // 포커스 들어가기
+			return;	
+		}
+	}
+</script>
+</head>
+<body>
+	<h1> Form 태그 유효성 검사 </h1>
+	<p> 1부터 10까지만 입력하세요 </p>
+	<!-- form 자식이 아니므로 서버에 전달 할 수는 없다. -->
+	<input type="number" id="numb">
+	<button type="button" onclick="myFunction()">실행</button>
+	<p id="demo"></p>
+	<hr>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 : Object</title>
+<script type="text/javascript">
+	function prn(msg) {
+		document.write(msg+"<br>");
+	}
+	
+	var person = {
+		name : "둘리",
+		age : 18,
+		salary : 2400,
+		pay : function() {
+			var month = this.salary / 12 ;
+			prn("이름 : "+this.name+", 월급 : "+ month);
+		}
+	};
+	
+	person.pay();
+	document.write("<hr>");
+	
+	// property 별도 저장 후 출력
+	var person2 = person.name;
+	prn(person2);
+	document.write("<hr>");
+	
+	//function()를 별도 저장 후 출력
+	var person3 = person.pay;
+	var name= "희동이"
+	var salary = 3600 ;
+	person3();
+	document.write("<hr>");
+	
+	var person4 = person;
+	person4.name = "마이콜";
+	person4.salary = 4800;
+	person4.pay();
+	
+	document.write("<hr>");
+</script>
+</head>
+<body>
+</body>
+</html>

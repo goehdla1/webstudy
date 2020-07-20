@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if 문</title>
+<script type="text/javascript">
+	// 자바 if 문과 같은 구조
+	// if(조건식){ 참일때 실행할 문장;} => 단순 if문
+	// if(조건식){ 참일때 실행할 문장;}else{거짓일때 실행할문장;} => if~else문
+	// if(조건식1){ 
+	//	  조건식1 참일때 실행할 문장;
+	//  }else if(조건식2){
+	//	  조건식1은 거짓이면서 조건식2는 참일때 실행할문장;
+	//  }else if(조건식3){
+	//	  조건식1,2은 거짓이면서 조건식3는 참일때 실행할문장;
+	//  }else{
+    //    조건식1,2,3 모두거짓, 나머지
+	//  }
+	
+	// k1과 근무시간은 prompt를 받아서 처리 하자
+	// k1 이 90이상이면 합격 아니면 불합격
+	var k1 = prompt("점수를 입력하세요");
+	var res = "";
+	if (k1>=90) {
+		res = "합격";
+	} else {
+		res = "불합격";
+	}
+	document.write("<p>당신은 "+res+"입니다.</p>");
+	
+	// k2이 짝수인지 홀수인지 판단
+	var k2 = prompt("정수를 입력하세요");
+	if (k2%2==0) {
+		res = "짝수";
+	} else {
+		res = "홀수";
+	}
+	document.write("<p>당신의 선택은 "+res+"입니다.</p>");
+	
+	// 근무시간이 8시간까지는 8950원, 8시간 초과하면 초과한 시간만큼은 1.5배 지급
+	var time = prompt("근무시간을 입력하세요");
+	var dan = 8950;
+	if (time>8) {
+		res = (8*8950)+(time-8)*dan*1.5 ;
+	} else {
+       res = time * 8950 ;
+	}
+	document.write("<p>당신의 알바비는 "+res+"입니다.</p>");
+	
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.box{
+		margin-left: 250px;
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+	function TrunOn() {
+		document.getElementById("b1").style.display="block";
+		document.getElementById("b2").style.display="none";
+	}
+	function TrunOff() {
+		document.getElementById("b1").style.display="none";
+		document.getElementById("b2").style.display="block";
+	}
+</script>
+</head>
+<body>
+	<div style="margin: auto; width: 300px; padding: 20px">
+		<button onclick="TrunOn()">켜기</button>
+		<button onclick="TrunOff()">끄기</button>
+	</div>
+	
+	<div class="box" id="b1" >
+		<img  src="images/pic_bulbon.gif">
+	</div>
+	
+	<div class="box" id="b2" >
+		<img  src="images/pic_bulboff.gif">
+	</div>
+	
+</body>
+</html>

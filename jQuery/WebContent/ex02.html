@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>click, addClass</title>
+<style type="text/css">
+ .silver{background-color: silver;}
+	
+</style>
+<script type="text/javascript">
+	// 자바스크립트
+	function go() {
+		alert('Hello');
+	}
+</script>
+
+<!-- CDN : 웹 상에서 jQeury 라이브러리 제공 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function name() {
+		document.getElementById("ch1").onclick=function(){
+			alert("jQuery에서 자바스크립트 DOM 방식");
+			document.getElementById("ch1").style.background="skyblue";
+		}
+		
+		$("#ch2").click(function() {
+			alert("jQuery 방식")
+			// addClass는 스타일에서 미리 만들어진 클래스 호출해서 스타일 적용
+			$("#ch2").addClass("silver");
+		});
+	});
+</script>
+</head>
+<body>
+	<div style="background-color: yellow;" onclick="alert('hi')">
+		안녕하세요 jQuery-1 입니다.	</div>
+		
+	<div class="silver" onclick="go()">안녕하세요 jQuery-2 입니다.	</div>
+		
+	<div id="ch1">안녕하세요 jQuery-3 입니다.	</div>		
+	
+	<div id="ch2">안녕하세요 jQuery-4 입니다.	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table 배경색</title>
+<style type="text/css">
+	table, th, td{
+	    border: 2px solid green;
+	}
+	thead{
+		background-color: tomato;
+	}
+	table{
+		 width: 700px;
+		 margin: auto;
+		 background-color: skyblue;
+	}
+	td{
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+		</thead>
+		<tbody style="background-color: orange;" >
+			<tr><td>유채방</td><td>여성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>동성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>가족</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>장미방</td><td>누구나</td><td>2인실</td><td>1인 20,000원</td></tr>
+		</tbody>
+	</table>
+	<hr>
+	<table>
+		<thead style="background-color: yellow;">
+			<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>유채방</td><td>여성</td><td rowspan="3">4인실</td><td rowspan="4">1인 20,000원</td></tr>
+			<tr><td rowspan="2" style="background-color: gray;">동백방</td><td>동성</td></tr>
+			<tr><td>가족</td></tr>
+			<tr><td>장미방</td><td>누구나</td><td>2인실</td></tr>
+		</tbody>
+	</table>
+	<hr>
+	<!-- 기존은 테이블,행,데이터 기준으로 일일이 배경색 지정 -->
+	<!-- 열 위주의 배경색 지정 : <col> 태그(끝태그 없음) -->
+	<table>
+		<col style="background-color: yellow;"> <!-- 첫번째열 -->
+		<col style="background-color: white;">  <!-- 두번째열 -->
+		<colgroup span="2" style="background-color: lightgray">
+		<thead>
+			<tr><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>유채방</td><td>여성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>동성</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>동백방</td><td>가족</td><td>4인실</td><td>1인 20,000원</td></tr>
+			<tr><td>장미방</td><td>누구나</td><td>2인실</td><td>1인 20,000원</td></tr>
+		</tbody>
+	</table>
+	<hr>
+	
+</body>
+</html>

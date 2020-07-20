@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 1. jQeury 라이브러리 다운로드 : https://jquery.com/download/ -->
+<!-- <script type="text/javascript" src="js/jquery-3.5.1.js"></script> -->
+
+<!-- CDN : 웹 상에서 jQeury 라이브러리 제공 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	document.write("Hello");
+</script>
+
+<script type="text/javascript">
+    // 실행순서 : head => body => jQeury 
+	// jquery 사용방법:
+	// $(document).ready(function() {
+			// jQuery 문법 : 기본은 자바스크립트
+			// $("selector").action() ;
+		    // selector = 선택자
+		    //  0. *       => 모든 요소
+		    //  1. this    => 현재진행중인 요소 (for문이나 객체에 많이 사용)
+		    //  2. element => 태그
+		    //  3. #       => 아이디
+		    //  4. .(점)   => 클래스
+		    //  5. :first  => 첫번째 요소
+		    //     :last   => 마지막 요소
+		    //  6. :first-child => 첫번째 자식요소
+		    //  7. :[속성]
+		    
+		    // action() => 자바스크립트의 function()과 같이 동작(기능)을 의미
+	// });  
+    
+    // 방법2
+    $(function() {
+		// hide() => 숨기는 액션
+		// "p" element 숨기기
+		// $("p").hide();
+		
+		// 아이디가 p1인 element만 숨기기
+    	// $("#p1").hide();
+		
+		// 클래스가 p2인 element만 숨기기
+    	// $(".p2").hide();
+		  
+		// 모든 요소 숨기기
+    	// $("*").hide();
+		
+		// 첫번째 요소 숨기기
+		//  $("p:first").hide();
+		
+		// 마지막 p요소 숨기기
+		// $("p:last").hide();
+		
+		// 첫번째 ul의 첫번째 li 요소
+		// $("ul li:first").hide();
+		
+		// 모든 ul 중에서 첫번째 li요소들 
+		// $("li:first-child").hide();
+		 $("ul li:first-child").hide();
+	});
+    
+</script>
+</head>
+<body>
+	<h2> jQuery Syntax </h2>
+	<p id="p1"> ICT 인재 개발원1 </p>
+	<p class="p2"> ICT 인재 개발원2 </p>
+	<p class="p2"> ICT 인재 개발원3 </p>
+	<p> ICT 인재 개발원4 </p>
+	<p> ICT 인재 개발원5 </p>
+	<hr>
+	
+	<ul>
+		<li>coffee</li>
+		<li>milk</li>
+		<li>tea</li>
+		<li>water</li>
+	</ul>
+	<ul>
+		<li>coffee2</li>
+		<li>milk2</li>
+		<li>tea2</li>
+		<li>water2</li>
+	</ul>
+	<ul>
+		<li>coffee2</li>
+		<li>milk2</li>
+		<li>tea2</li>
+		<li>water2</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

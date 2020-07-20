@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+div {
+	background-color: skyblue;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+}
+</style>
+<script type="text/javascript">
+	
+	$(function () {
+		// 체인 : 단일명령문 내에서 동일한 요소에게 여러 jQuery 효과를 실행하는 것.
+		$("#p1").click(function () {
+			$("#div1").slideDown(1000).slideUp(1000).show(1000).hide(1000).fadeIn(1000).fadeOut(1000);
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<p id="p1">눌러주세요</p>
+	<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>대화상자</title>
+<script type="text/javascript">
+	// 자바스크립트의 대화상자는 모두 3개이다.
+	// alert(경고창),  confirm(확인창), prompt(입력창)
+	document.write("<h2>");
+	// 1. alert("내용"): 사용자에게 내용을 전달하는 역할
+	//                   리턴이 없다.
+	// alert("hello\nHi~~~~");
+	
+	// 2. confirm("내용") : 사용자에게 내용을 전달하고 답을 받는다.
+	//                      리턴있다.(true, false가 존재한다.)
+	// var res = confirm("점심식사 하셨나요?");
+	// document.write("결과 : " + res);
+	
+	// 3. prompt("내용"), prompt("내용",초기값) : 사용자에게 정보를 받을 사용
+	//                                              리턴이 있다.
+	// var res = prompt("당신의 나이?");
+	// var res = prompt("당신의 나이?",24);
+	// document.write("결과 : " + res);
+	var res = prompt('정수를 입력하세요');
+	res = (res%2==0)?"짝수":"홀수";
+	document.write("결과 : " + res);
+	document.write("</h2>");
+</script>
+</head>
+<body>
+</body>
+</html>

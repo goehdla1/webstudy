@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Links : a 태그</title>
+</head>
+<body>
+	<!--
+	   문법:<a href="url" target="value">link text </a>
+	     - href = "#" 은 현재문서라는 뜻
+	     
+	     - target 에 들어가는 값들 : _blank(새창)
+	                                 _self(default, 자기자신)
+	                                 _parent(부모창)
+	                                 name  
+	  -->
+	  <a href="https://www.naver.com">Naver</a>
+	  <a href="https://www.daum.net">Daum</a>
+	  <a href="https://google.com">Google</a>
+	  <hr>
+	  <a href="https://www.naver.com" target="_blank">Naver</a>
+	  <a href="https://www.daum.net" target="_blank">Daum</a>
+	  <a href="https://google.com" target="_blank">Google</a>
+	  <hr>
+	  <!-- 상대주소 -->
+	  <a href="../day02/html01.html">참조문서1</a>
+	  <!-- 절대주소 -->
+	  <a href="/htmlstudy/day02/html02.html">참조문서2</a>
+	  <hr>
+	  <h2> 같은 문서에서 다른 위치로 이동 하기 (name이용)</h2>
+	  <p><a href="#first">첫번째 단락</a></p>
+	  <p><a href="#second">두번째 단락</a></p>
+	  <p><a href="#third">세번째 단락</a></p>
+	  <br><br><br><br><br><br>
+	  <a name="first">첫번째단락</a>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	  <a name="second">두번째단락</a>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	  <a name="third">세번째단락</a>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+	  <p>.</p><p>.</p><p>.</p><p>.</p><p>.</p>
+</body>
+</html>
+
+
+
+
+

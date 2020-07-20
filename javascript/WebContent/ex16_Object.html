@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체 : Object</title>
+<script type="text/javascript">
+// 객체는 Object, 객체 안에는 상태값(property)와 기능(function)
+
+// 객체 만드는 방법1
+var person1 = new Object(); 
+// 상태값  
+person1["name"] = "홍길동";
+person1["age"] = 14;
+person1["gender"] = true;
+
+document.write("<h2> Object 상태값 호출");
+document.write("<p>" + person1["name"] + "</p>");
+document.write("<p>" + person1.age + "</p>");
+document.write("<p>" + person1.gender + "</p>");
+document.write("<hr>");
+
+// 객체 만드는 방법2 
+var person2 = {name:"임꺽정", age:47, addr:"충청도", gender:true};
+document.write("<p>" + person2["name"] + "</p>");
+document.write("<p>" + person2.age + "</p>");
+document.write("<p>" + person2.addr + "</p>");
+document.write("<p>" + person2.gender + "</p>");
+document.write("<hr>");
+
+// 객체 만드는 방법3
+var person3 = {
+	name:"장길산", 
+	age:27, 
+	gender:true,
+	prn : function() {
+		return "안녕하세요";
+	},
+	play: function() {
+		// 자바스크립트에서는 자기의 property를 사용하기 위해서 this 반드시 사용
+		document.write(this.name+", "+ this.age);
+	}
+}
+document.write("<p>" + person3["name"] + "</p>");
+document.write("<p>" + person3.age + "</p>");
+document.write("<p>" + person3.gender + "</p>");
+document.write("<p>" + person3.prn + "</p>");
+document.write("<p>" + person3.prn() + "</p>");
+document.write("<p>")
+person3.play();
+document.write("</p>")
+document.write("<hr>");
+
+
+document.write("</h2>");
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#res1{
+		color: tomato;
+		background: skyblue;
+	}
+</style>
+</head>
+<body>
+	<p id="demo1">Hello World</p>
+	<p><spen id="demo2">WelCome KOREA</spen></p>
+	<hr>
+	<p id="res1">서울시 마포구 서교동</p>
+	<p id="res2"></p>
+	
+	<script type="text/javascript">
+	// html 요소 변경하기 
+	// element.innerHTML : 내용 변경
+	// element.attribute : 속성 변경
+	// element.style.property : CSS 속성 변경
+	
+	document.getElementById("res1").innerHTML = "KOREA SEOUL"; 
+	document.getElementById("res2").innerHTML = "<h2>KOREA SEOUL</h2>";
+	document.getElementById("demo1").align = "center" ;
+	document.getElementById("demo2").style.color = "tomato" ;
+	document.getElementById("demo2").style.background = "skyblue" ;
+	</script>
+</body>
+</html>

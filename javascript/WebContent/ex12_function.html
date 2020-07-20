@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+   test1();
+	function test1() {
+		document.write("Hi~~~");
+	}
+	
+	function test1() {
+		document.write("Hello~~~");
+	}
+	test1();
+	document.write("<hr>");
+</script>
+<script type="text/javascript">
+    // test2(); 오류 (익명함수는 먼저 호출 할 수 없다.)
+	var test2 = function(){
+		document.write("하이~~~~");
+	}
+    var test2 = function(){
+    	document.write("헬로~~~");
+	}
+    test2();
+	document.write("<hr>");
+</script>
+<script type="text/javascript">
+    test3();
+	function test3() {
+		document.write("방가방가~~~~");
+	}
+	var test3 = function() {
+		document.write("안녕~~~~");
+	}
+	test3();
+	document.write("<hr>");
+</script>
+<script type="text/javascript">
+    test4();
+	var test4 = function() {
+		document.write("안녕~~~~");
+	}
+	function test4() {
+		document.write("방가방가~~~~");
+	}
+	test4();
+	document.write("<hr>");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

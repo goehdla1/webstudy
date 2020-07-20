@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>속성 선택기</title>
+<style type="text/css">
+	a{text-decoration: none;}
+	a[target="_blank"]{ background-color: yellow;}
+	a[href^="https"]{ color: orange; font-weight: bold;}
+	a[href$="net"]{ color: green; font-weight: bold;}
+	a[href*="@"]{color: purple; font-weight: bold;}
+	
+</style>
+</head>
+<body>
+<!--
+	요소[속성=값] : 일치하는 요소
+	요소[속성^=값] : ~로 시작하는 
+	요소[속성*=값] : ~이 포함되어있는 
+	요소[속성$=값] : ~로 끝나는
+  -->
+  <a href="https://www.naver.com">네이버</a>
+  <a href="https://www.daum.net" target="_blank">다 음</a>
+  <a href="https://www.goole.com">구글</a>
+  <a href="mailto:nojm73@naver.com">네이버메일</a>
+  <a href="mailto:nojm73@daum.net" target="_blank">다음메일</a>
+  <a href="mailto:nojm73@google.com">구글메일</a>
+</body>
+</html>
+
+
+
+

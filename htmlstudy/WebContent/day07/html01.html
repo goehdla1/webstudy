@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas</title>
+</head>
+<body>
+	<img id="myimg" src="../images/pic_bulbon.gif">
+	<!-- canvas 요소는 웹 페이지에 그래픽을 그리는데 사용  -->
+	<!-- 자바스크립트를 이용해서 선, 원, 사각형, 그림, 글자를 표현 -->
+	<canvas id="mycanvas" width="800" height="600"
+		style="border: 1px solid tomato"></canvas>
+	<script type="text/javascript">
+		// 현재문서에서 id가 mycanvas인 객체를 참조하는 주소를 변수 c에 저장
+		var c = document.getElementById("mycanvas");
+
+		// 2d 그래픽 처리 할거야 
+		var ctx = c.getContext("2d");
+
+		// 시작
+		ctx.beginPath();
+		// 좌표가 0,0인 곳으로 이동하자
+		ctx.moveTo(10, 10); // 시작위치
+
+		// 선 긋기 (끝위치)
+		ctx.lineTo(210, 10);
+		ctx.stroke();
+
+		/* 다시 선긋기 */
+		ctx.beginPath()
+		ctx.moveTo(10, 10);
+		ctx.lineTo(10, 210);
+		ctx.stroke();
+		
+		ctx.beginPath()
+		ctx.moveTo(210, 10);
+		ctx.lineTo(210, 210);
+		ctx.stroke();
+		
+		ctx.beginPath()
+		ctx.moveTo(10, 210);
+		ctx.lineTo(210, 210);
+		ctx.stroke();
+		
+		ctx.beginPath()
+		ctx.strokeStyle="#ff0000"
+		ctx.moveTo(10, 10);
+		ctx.lineTo(210, 210);
+		ctx.stroke();
+		
+		ctx.beginPath()
+		ctx.strokeStyle="#ff0000"
+		ctx.moveTo(10, 210);
+		ctx.lineTo(210, 10);
+		ctx.stroke();
+		
+		/* 사각형 (strokeRect(시작위치,w,h), fillRect) */
+		ctx.beginPath()
+		ctx.strokeStyle="#ff00ff"
+		ctx.strokeRect(220,10,200,200)
+		ctx.stroke();
+		
+		/* 사각형 (strokeRect(시작위치,w,h), fillRect) */
+		ctx.beginPath()
+		ctx.fillStyle="#ff00ff"
+		ctx.fillRect(230,20,180,180)
+		ctx.stroke();
+		
+		/* 사각형 (strokeRect(시작위치,w,h), fillRect) */
+		ctx.beginPath()
+		ctx.fillStyle="skyblue"
+		ctx.fillRect(240,30,160,160)
+		ctx.fill();
+		
+		// 원 ( arc (중심좌표,반지름,시작각도,끝각도))
+		// 각도: Math.PI*2 (정원) Math.PI*1(반원)  
+		ctx.beginPath()
+		ctx.storkeStyle="tomato"
+		ctx.arc(530,105,100,0,Math.PI*2);
+		ctx.stroke();
+		
+		ctx.beginPath()
+		ctx.fillStyle="orange"
+		ctx.arc(530,105,50,0,Math.PI*2);
+		ctx.fill();
+		
+		// 글자(text,시작위치, 글자의 밑이 기준)
+		ctx.beginPath()
+		ctx.font = "130px Arial"
+		ctx.strokeText("Hello World",10,320)
+		ctx.stroke();
+		
+		// 글자(text,시작위치, 글자의 밑이 기준)
+		ctx.beginPath()
+		ctx.font = "130px Arial"
+		ctx.fillText("Hello World",10,420)
+		ctx.fill();
+		
+		// 이미지(drawImage)
+		ctx.beginPath();
+		var img = document.getElementById("myimg");
+		ctx.drawImage(img,10,420);
+	</script>
+</body>
+</html>
+
+
+
+

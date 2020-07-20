@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>overflow</title>
+<style type="text/css">
+ #d1{
+ 	width: 250px;
+ 	height: 50px;
+ 	border: 1px solid gray;
+ 	overflow: visible;
+ }
+ #d2{
+ 	width: 250px;
+ 	height: 50px;
+ 	border: 1px solid gray;
+ 	overflow: hidden;
+ }
+ #d3{
+ 	width: 250px;
+ 	height: 100px;
+ 	border: 1px solid gray;
+ 	overflow: scroll;
+ }
+ #d4{
+ 	width: 250px;
+ 	height: 100px;
+ 	border: 1px solid gray;
+ 	overflow: auto;
+ }
+</style>
+</head>
+<body>
+<!--
+	overflow : 너무커서 영역에 맞지 않을 내용을 제어할때 사용	
+	  - visible : 기본. 내용은 요소 상자 외부에서도 보임
+	  - *hidden : 오버플로가 잘리고 나머지 내용은 보이지 않음
+	  - scroll : 오버플로가 잘리고 스크롤이 추가 됨
+	  - *auto  : 필요할때만 스크롤이 추가됨
+  -->
+<h2>CSS Overflow</h2>
+<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
+<div id="d1">You can use the overflow property when you want to have better 
+     control of the layout. The overflow property specifies what 
+     happens if content overflows an element's box.</div>
+<br><br><br><br><br>    
+<div id="d2">You can use the overflow property when you want to have better 
+     control of the layout. The overflow property specifies what 
+     happens if content overflows an element's box.</div> 
+<br><br><br><br><br>    
+<div id="d3">You can use the overflow property</div> 
+     <br><br><br><br><br>    
+<div id="d4">You can use the overflow propertyThe overflow property specifies what 
+     happens if content overflows an element's box.</div> 
+</body>
+</html>

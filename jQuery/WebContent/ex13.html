@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 콜백기능은 현재 효과가 100% 완료 되었을 때 실행되는 기능
+		// $(selector).hide() , %(selector).hide(speed , callback)
+
+		// 콜백함수 실행 안함.
+		$("#p1").click(function() {
+			$("#img").toggle("slow");
+			alert("hide 완성");
+		});
+
+		// 콜백함수 실행
+		$("#p2").click(function() {
+			$("#img").toggle("slow", function() {
+				alert("hide 완성");
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="p1">콜백함수사용 안함</button>
+	<button id="p2">콜백함수 사용</button>
+
+	<br>
+	<br>
+	<br>
+	<img id="img" alt="" src="images/pic_bulboff.gif">
+	<p>Hello World</p>
+
+</body>
+</html>

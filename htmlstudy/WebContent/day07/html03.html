@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>video 와 audio</title>
+</head>
+<body>
+	<!--
+		속성 : controls : 컨트롤러 보이게 하기
+		       autoplay : 자동실행 
+		       loop     : 반복처리 
+		       muted : 음소거, 같이사용하면 자동실해됨 
+	  -->
+	  <video src="../multi/video.mp4" controls autoplay muted></video>
+	  <hr>
+	  <video controls autoplay muted width="320" height="240">
+	  		<source src="../multi/video.mp4">
+	  </video>
+	  <hr>
+	  
+	  <audio src="../multi/All.mp3" controls></audio>
+	  <hr>
+	  <audio controls>
+	  		<source src="../multi/All.mp3">
+	  </audio>
+	  <hr>	
+	  
+	  <!-- youtube는 API를 사용하여 자바스크립트를 이용해야 된다. -->
+	  
+</body>
+</html>
+
+
+
+
+
+
+
+

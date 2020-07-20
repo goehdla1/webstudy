@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table : 테이블 (표)</title>
+<style type="text/css">
+	table{
+		margin: auto; /* 표자체를 가운데 정렬 */
+	}
+	table, th, td {
+		border: 3px solid green; /* 테두리 */
+		width: 600px;            /* 표 넓이 */
+		/* border-collapse: collapse;  */ /* 표 테두리선이 하나로 만들어진다. */
+		border-collapse: separate; 
+	}
+	td{
+	  text-align: center;
+	}
+</style>
+</head>
+<body>
+	<!--
+	    table 태그 안에 존재하는 태그들
+	    <thead> : 테이블의 머리글, 생략가능
+	    <tbody> : 테이블의 본문,
+	    <tfoot> : 테이블의 꼬리글, 생략가능
+	    위에 태그들 안에 
+	      <tr> : 행
+	      <tr> 테그안에 
+	           <td>(data/cell),
+	           <th>(data/cell 이름, 굵게, 가운데정렬) 보통 <thead> 에서 사용
+	                    
+	    테이블 테두리를 지정하지 않으면 나타나지 않음
+	    테이블 테두리는 기본적으로 <style>를 이용한다. 
+	                                  
+	  -->
+	  
+	  <table>
+	  	<thead>
+	  		<tr> <th>이름</th> <th>나이</th> <th>주소</th> </tr>
+	  	</thead>
+	  	<tbody>
+	  		<tr> <td>둘리</td> <td>27</td> <td>남극</td> </tr>
+	  		<tr> <td>공실이</td> <td>26</td> <td>북극</td> </tr>
+	  		<tr> <td>희동이</td> <td>3</td> <td>서울</td> </tr>
+	  	</tbody>
+	  </table>
+	  <hr>
+	  
+	   <table>
+	  	<tbody>
+	  		<tr> <th>이름</th> <th>나이</th> <th>주소</th> </tr>
+	  		<tr> <td>둘리</td> <td>27</td> <td>남극</td> </tr>
+	  		<tr> <td>공실이</td> <td>26</td> <td>북극</td> </tr>
+	  		<tr> <td>희동이</td> <td>3</td> <td>서울</td> </tr>
+	  	</tbody>
+	  </table>
+	  <hr>
+	   
+	   <table>
+  		<tr> <th>이름</th> <th>나이</th> <th>주소</th> </tr>
+  		<tr> <td>둘리</td> <td>27</td> <td>남극</td> </tr>
+  		<tr> <td>공실이</td> <td>26</td> <td>북극</td> </tr>
+  		<tr> <td>희동이</td> <td>3</td> <td>서울</td> </tr>
+	  </table>
+	  <hr>
+	  
+	  <table>
+	  	<caption> 아기공룡 둘리 멤버 </caption>
+	  	<thead>
+	  		<tr> <th>이름</th> <th>나이</th> <th>주소</th> </tr>
+	  	</thead>
+	  	<tbody>
+	  		<tr> <td>둘리</td> <td>27</td> <td>남극</td> </tr>
+	  		<tr> <td>공실이</td> <td>26</td> <td>북극</td> </tr>
+	  		<tr> <td>희동이</td> <td>3</td> <td>서울</td> </tr>
+	  	</tbody>
+	  </table>
+	  <hr>
+	   <!-- 자리를 변경도 해도 표현될때는 원래자리에서 표현된다. -->
+	  <table>
+	  	<tbody>
+	  		<tr> <td>둘리</td> <td>27</td> <td>남극</td> </tr>
+	  		<tr> <td>공실이</td> <td>26</td> <td>북극</td> </tr>
+	  		<tr> <td>희동이</td> <td>3</td> <td>서울</td> </tr>
+	  	</tbody>
+	  	
+	  	<thead>
+	  		<tr> <th>이름</th> <th>나이</th> <th>주소</th> </tr>
+	  	</thead>
+	  	
+	  	<caption> 아기공룡 둘리 멤버 </caption>
+	  </table>
+	  <hr>
+	</body>
+</html>
+
+
+
+
+
+
+
+

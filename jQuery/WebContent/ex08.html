@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>효과 - Hide and show</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// $(selector).hide() , %(selector).hide(speed)
+	// $(selector).show() , %(selector).show(speed)
+	// => speed 숫자 (400=기본값) , 문자지정 ("fast" , "slow") 
+	$(function name() {
+		$("#p1").click(function() {
+			$("#img").hide();
+
+		});
+	});
+	$(function name() {
+		$("#p2").click(function() {
+			$("#img").show("slow");
+
+		});
+		var i = 0 ;
+		$("#p3").click(function() {
+			
+			if(i%2==0){
+				$(this).text("보이기");
+				
+			}else{
+				$(this).text("감추기");
+			
+			}
+			i++;
+			$("#img").toggle("slow");
+
+		});
+
+	});
+</script>
+</head>
+<body>
+	<button id="p1">감추기</button>
+	<button id="p2">보이기</button>
+	<button id="p3">감추기</button>
+	<br>
+	<br>
+	<br>
+	<img id="img" alt="" src="images/pic_bulboff.gif">
+	<p>Hello World</p>
+</body>
+</html>

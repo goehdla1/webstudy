@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// 마우스 이벤트 : click(on , bind) , mouseover(mouseenter) , mouseout(mouseleave)
+	// 키보드 이벤트 : keypress , keydown , keyup
+	// form이벤트 : submit , change , focus
+
+	// 클릭
+	$(function() {
+		// 클릭
+		/*$("#p1").click(function () {
+			alert("클릭성공");
+			
+		});
+		$("#p1").dblclick(function () {
+			alert("클릭성공");
+			
+		});
+		$("#p1").on("click",function () {
+			alert("클릭성공");
+			
+		});
+
+		$("#p1").bind("click", function() {
+			alert("클릭성공");
+		});
+		
+		
+		// 마우스포인트를 올렸다가 벗어날 때
+		$("#p1").mouseover(function() {
+			alert("클릭성공");
+		});
+		
+		$("#p1").mouseenter(function() {
+			alert("클릭성공");
+		});
+		
+		//마우스 아웃
+		$("#p1").mouseout(function() {
+			alert("클릭성공");
+		});
+		
+		$("#p1").mouseleave(function() {
+			alert("클릭성공");
+		});*/
+		
+		// 키보드 이벤트
+		$("#name").keyup(function () {
+			//alert("누르셨네욘");
+			// 입력한 값 가져오기.
+			var name = $(this).val();
+			alert(name);
+		});
+		
+		$("#chk").change(function () {
+			//alert("누르셨네욘");
+			// 입력한 값 가져오기.
+			/* var str = $("#id").val(); //get
+			$("#id2").val(str); //set */
+			
+			if($(this).is(":checked")){ // is = 같냐? 라는 뜻 / 체크박스가 체크된 상태냐?
+			var str = $("#id").val();
+			$("#id2").val(str);
+				
+			}else {
+				$("#id2").val("");
+			}
+		});
+		// 라디오
+		$(":radio").change(function () {
+		
+			if($(this).is(":checked")){
+			var str = $(":checked").val();
+			$("#res").val(str);
+				
+			}
+		});
+	
+		$("#pwd2").keyup(function () {
+			if($("#pwd").val() == $("#pwd2").val()){
+				$("#s1").html("<b> 암호가 같습니다. </b>");
+				
+			}else {
+			
+				$("#s1").html("<b> 암호가 다릅니다.. </b>");
+			}
+		});
+		
+		 $("#img").mouseover(function() { 
+			 // alert("성공");
+			 $(this).attr("src","images/pic_bulbon.gif");
+		 });
+		 $("#img").mouseout(function() {
+			 // alert("실패");
+			  $(this).attr("src","images/pic_bulboff.gif");
+		 });
+		
+	})
+</script>
+</head>
+<body>
+	<p>
+		<span id="p1"> 이벤트 처리 </span>
+	</p>
+	<p><img id="img" alt="" src="images/pic_bulboff.gif"></p>
+	<p><input type="text" name="name" id="name"></p>
+	<hr>
+	<p><input type="text" name="id" id="id"></p>
+	<p><input type="checkbox" id="chk">상동</p>
+	<p><input type="text" name="id2" id="id2"></p>
+	<hr>
+	<input type="radio" name="fruit" value="orange" id="orange">오렌지
+	<input type="radio" name="fruit" value="apple" id="apple"> 사과
+	<input type="radio" name="fruit" value="banana" id="banana"> 바나나
+	<p><input type="text" name="res" id="res"></p>
+	<hr>
+	
+	<p>비번 : <input type="text" name="pwd" id="pwd"></p>
+	<p>비번확인 : <input type="text" name="pwd2" id="pwd2">
+	<span id = "s1"></span></p>
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

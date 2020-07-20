@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>stop animations</title>
+<style type="text/css">
+#panel, #flip{
+	padding: 5px;
+	font-size: 18px;
+	text-align: center;
+	background-color: silver;
+	color: white;
+	border: solid 1px #555;
+	border-radius: 5px;
+}
+/*
+#panel{
+	 애니메이션을 쓸때는 사용하지 않는다.
+	 padding: 50px; 
+	 display: none; 
+}
+*/
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// slideDown, animate를 멈추자 => stop()
+		/*
+		$("#flip").click(function() {
+			$("#panel").slideDown(5000);
+		});
+		*/
+		$("#flip").click(function() {
+			$("#panel").animate({
+				height:'250px'},5000);
+		});
+		$("#stop").click(function() {
+			$("#panel").stop();
+		})
+	});
+</script>
+</head>
+<body>
+	<button id="stop">STOP</button>
+	<div id="flip">START</div>
+	<div id="panel">Hello World</div>
+</body>
+</html>

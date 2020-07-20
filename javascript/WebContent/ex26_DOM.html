@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#div1{background: yellow;}
+</style>
+</head>
+<body>
+<div id="div1">
+	<p id="p1">This is a paragraph.</p>
+	<p id="p2">This is another paragraph.</p>
+</div>
+
+<script type="text/javascript">
+		// html 요소(태그) 추가 및 삭제하기 
+		// document.createElement(element) : 요소 생성
+		// document.removeChild(element)   : 자식 요소 삭제
+		// document.appendChild(element)   : 자식 요소 추가 뒤에 추가
+		// insertBefore(요소1, 요소2)      : 요소2앞에 요소1fmf sjgdjwntpdy
+		// document.createTextNode(text)   : text 생성
+		// document.write(text)            : text 표시
+		
+		var p = document.createElement("p");   // p태그 생성
+		var hr = document.createElement("hr"); // hr태그 생성
+		var node = document.createTextNode("This is new paragraph");  // 글자 생성
+		
+		// 생성된 글자가 생성된 p태그 안에 들어간다.
+		 p.appendChild(node);
+		// document.body.appendChild(hr); 
+		// document.body.appendChild(p);
+		
+		/*
+		var div1 =  document.getElementById("div1");
+		div1.appendChild(hr);
+		div1.appendChild(p);
+		*/
+		
+		// p2 앞에 넣기 
+		var p2 = document.getElementById("p2");
+		var div1 =  document.getElementById("div1");
+		div1.insertBefore(p,p2); // p2에 p를 넣어주세요 
+</script>
+</body>
+</html>

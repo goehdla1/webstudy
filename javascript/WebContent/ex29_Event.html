@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트:onmouseover, onmouseout, onmousedown, onmouseup</title>
+<style type="text/css">
+	div{
+		width: 150px;
+		height: 20px;
+		padding: 40px;
+		
+	}
+	#box1{background-color: #898989;}
+	#box2{background-color: green;}
+	#box3{background-color: rgb(255,255,0);}
+	#box4{background-color: skyblue;}
+	#box5{background-color: red;}
+</style>
+<script type="text/javascript">
+	function mOver(obj) {
+		obj.innerHTML = "<h3>Thank You</h3>";
+	}
+	function mOut(obj) {
+		obj.innerHTML = "Mouse Over Me";
+	}
+	function mDown(obj) {
+		obj.style.background="tomato";
+		obj.style.color="white";
+		obj.innerHTML = "<h3>Thank You</h3>";
+	}
+	function mUp(obj) {
+		obj.style.color="blue";
+		obj.style.background="purple";
+		obj.innerHTML = "Click Me";
+	}
+	function test1() {
+		document.getElementById("box3").style.background="tomato";
+		document.getElementById("box3").style.color="white";
+		document.getElementById("box3").innerHTML = "<h3>Thank You</h3>";
+	}
+	function test2(obj) {
+		obj.style.color="blue";
+		obj.style.background="purple";
+		obj.innerHTML = "Click Me";
+	}
+</script>
+</head>
+<body>
+	<!-- this란 현재 진행중인 객체  -->
+	<div id="box1" onmouseover="mOver(this)" onmouseout="mOut(this)">Mouse Over Me</div>
+	<div id="box2" onmousedown="mDown(this)"  onmouseup="mUp(this)">Click Me</div>
+	<div id="box3" onclick="test1()">Click Me1</div>
+	<div id="box4" onclick="test2(this)">Click Me2</div>
+	<div id="box5">Click Me3</div>
+	<script type="text/javascript">
+		// id가 box5인 요소에 이벤트 리스너 추가 함
+		document.getElementById("box5").addEventListener("click",function(){
+			document.getElementById("box5").style.background="skyblue";
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

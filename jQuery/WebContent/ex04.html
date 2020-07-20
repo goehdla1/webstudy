@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>addClass</title>
+<style type="text/css">
+	.selected{color: red;}
+	.bg{background-color: yellow;}
+	div{background-color: green;}
+	.white{color: white;}
+	.red{background-color: red;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		 // p요소의 첫번째, 마지막
+		 // $("p").first().addClass("bg selected");
+		 // $("p").last().addClass("bg selected");
+		   $("p:first").addClass("bg selected");
+		   $("p:last").addClass("bg selected");
+
+		//   div 요소의 홀수와 짝수
+		//   $("div:even").addClass("bg");
+		//   $("div:odd").addClass("selected");
+		   
+	      //  $("div").addClass("red");
+		   $("div").addClass(function(index, currentClass) {
+			   var red;
+			  	if(currentClass === "white"){
+			  		red = "red";
+			  	// $("선택자").text("내용") : 선택자에 내용 적용(setter, 글자만 사용)
+			  	// $("선택자").html("내용") : 선택자에 내용 적용(setter, 글자/태그사용)
+			  	// $("#box").text("<h2>여기는 DIV 입니다.</h2>");
+			  	   $("#box").html("<h2>여기는 DIV 입니다.</h2>");
+			  	}
+			  return red;
+		   });
+	});
+</script>
+</head>
+<body>
+	<p>Hello</p>
+	<p>and</p>
+	<p>Goodbey</p>
+	
+	<div>This div</div>
+	<div class="white">This div</div>
+	<div id="box">This div</div>
+	<div>This div</div>
+	<div>This div</div>
+	<div>This div</div>
+	<div>This div</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 : Array</title>
+<script type="text/javascript">
+// 같은 종류의 자료(데이터)들의 묶음
+// 자바스크립트는 데이터 타입의 영향을 받지 않으므로 데이터들의 묶음이다.
+
+// 방법1.
+ var arr = new Array();
+  arr[0] = 1 ;
+  arr[1] = true;
+  arr[2] = 'A';
+  arr[3] = 'ICT 인재 개발원';
+  arr[4] = 3.14;
+  for (var i = 0; i < arr.length; i++) {
+	document.write("<h3>"+arr[i]+"</h3>");
+  }  
+  document.write("<hr>");
+
+  // 방법2.
+  var arr2 = new Array('boys',true,'Y',4201, 23.12045);
+  for (var i = 0; i < arr2.length; i++) {
+		document.write("<h3>"+arr2[i]+"</h3>");
+	}
+  document.write("<hr>");
+  
+  // 방법3
+  var arr3 = ["홍길동",true,"장길산", 23.12045,"임꺽정", "일지매"];
+  for (var k in arr3) {
+	  // 인덱스값이 넣어온다.
+	  // document.write(k+"&nbsp;&nbsp;&nbsp;");
+	  document.write(arr3[k]+"&nbsp;&nbsp;&nbsp;");
+  }
+</script>
+</head>
+<body>
+</body>
+</html>
