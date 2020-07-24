@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>삭제</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+			// remove() : 선택한 요소 및 자식 요소 제거
+			// empty() : 선택한 요소에서 자식 요소 제거 (초기화)
+			
+	$("#btn1").click(function() {
+		$("#div1").empty();
+	})
+	$("#btn2").click(function() {
+		$("#div1").remove();
+	})
+	$("#btn3").click(function() {
+		$("p").remove(".test");
+	})
+	$("#btn4").click(function() {
+		$("p").remove(".test,.demo");
+	})
+		
+	})
+	</script>
+<style type="text/css">
+	div{
+		width: 400px;
+		height: 200px;
+		border: 1px solid black;
+		background-color: yellow;
+		
+	}
+</style>
+</head>
+<body>
+	<div id="div1">
+		This is some text in the div
+		<p class="test">This is a paragraph01 in the div</p>
+		<p>This is a paragraph02 in the div</p>
+		<hr>
+		<p class="test">This is a paragraph03 in the div</p>
+		<p class="demo">This is a paragraph04 in the div</p>
+	</div>
+	<br>
+	<button id="btn1">empty() div</button>
+	<button id="btn2">remove() div</button>
+	<button id="btn3">Remove() div</button>
+	<button id="btn4">Remove() div</button>
+</body>
+</html>

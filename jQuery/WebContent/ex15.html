@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		// text() : 텍스트 내용 설정(set) 및 반환(get)
+		// html() : html 적용 내용 설정 및 반환
+		// val() : input type의 value 값 설정 및 반환
+		// attr() : 속성 설정 및 반환
+		$("#btn1").click(function() {
+			alert($("#test").text());
+		});
+		$("#btn2").click(function() {
+			alert($("#test").html());
+		});
+		$("#btn3").click(function() {
+			alert($("#pw").val());
+		});
+		$("#btn4").click(function() {
+			alert($("#w3").attr("href"));
+		});
+	});
+	</script>
+</head>
+<body>
+	<p id="test">
+		This is some<b>bold</b>text in a Paragraph.
+	</p>
+	<p><input type="password" id = "pw" placeholder="비번입력"></p>
+	<p><a href="http://www.w3schools.com" id="w3">W3School.com</a></p>
+	<button id="btn1">Show text</button>
+	<button id="btn2">Show html</button>
+	<button id="btn3">Show val</button>
+	<button id="btn4">Show attr</button>
+</body>
+</html>

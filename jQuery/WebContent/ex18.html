@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// Add Elements (요소 추가)
+	// append() : 요소의 끝에 내용을 추가
+	// prepend() : 요소의 시작 부분을 내용을 추가
+	// before() : 요소 앞에 내용을 삽입
+	// after() : 요소 뒤에 내용을 삽입
+	$(function() {
+		$("#btn1").click(function() {
+			$("p").append("<b>글자 추가 하기</b>");
+		});
+		$("#btn2").click(function() {
+			$("ol").append("<li>리스트 추가</li>")
+		});
+		$("#btn3").click(function() {
+			$("p").prepend("<b>Hello</b>");
+		});
+		$("#btn4").click(function() {
+			$("ol").prepend("<b>Hello</b>");
+		});
+		$("#btn5").click(function() {
+			$("p").before("<b>jQuery</b>");
+		});
+		$("#btn6").click(function() {
+			$("ol").after("<li>jQuery</li>");
+		});
+	})
+</script>
+</head>
+<body>
+<p> 이것은 문단 입니다. </p>
+<p> 이것은 또 다른 문단 입니다. </p>
+<p> 이것은 또 다른 문단 입니다. </p>
+<ol>
+	<li>List item 01</li>
+	<li>List item 02</li>
+	<li>List item 03</li>
+</ol>
+	<button id="btn1"> Append text </button>
+	<button id="btn2"> Append list items </button>
+	<button id="btn3"> prepend text </button>
+	<button id="btn4"> prepend list items </button>
+	<button id="btn5"> before </button>
+	<button id="btn6"> after </button>
+</body>
+</html>

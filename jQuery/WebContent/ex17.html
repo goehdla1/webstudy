@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		// each : 반복문(for문)
+		// each(function (index , element) {실행 내용});
+		// 여러번 반복 할때 현재 실행중인 요소를 선택할 때 this 사용.
+		$("p").each(function(index) {
+			$(this).attr({"id":"para-"+index});
+			
+		});
+		$("#btn1").clic(function() {
+			alert($("para-1").text()); // 글자만 추출
+		});
+		$("#btn2").clic(function() {
+			$("para-4").text("Hello jQuery")
+		});
+	});
+	</script>
+</head>
+<body>
+	<p> 이것은 하나의 단락 이다. </p>
+	<p> <b>첫번째</b> </p>
+	<p> 두번째 </p>
+	<p> 세번째 </p>
+	<p> 네번째 </p>
+	<p> 다섯번째 </p>
+	<hr>
+	<button id="btn1"> 동작 1 </button>
+	<button id="btn2"> 동작 2 </button>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#btn").click(function() {
+			$("#box").animate(
+					{width:"400px"},
+					{duration: 4000,
+						step: function(x){
+							$("#demo").text(Math.round(x * 100/400)+"%");	
+					}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<p><button id="btn">start button</button> </p>
+	<div style="border: 1px solid green; margin: 10px; width: 400px;">
+		<div id="box" style="background-color: lime; height: 50px; width: 0px; border: 1px solid green"></div>
+	</div>
+	<p id="demo"></p>
+</body>
+</html>

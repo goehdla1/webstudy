@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var news = ["엑스퍼트 '변호사법 위반' 논란에 중개비 아닌 결제대행 수수료 포토 뉴스1",
+		"코로나19에도 웃는 게임사 …중견업체 2분기 실적 '好好' 포토 아이뉴스24",
+		"약으로 살 빼면서 당뇨 치료…'포스트 삭센다' 시대 여는 K바이오 한국경제",
+		"MS, 팀즈용 로코드 데이터 플랫폼 '데이터플렉스' 공개 포토 ZDNet Korea",
+		"여행 가방에 '바캉스 상비약' 챙기셨나요? 포토 한국경제"];
+	var timer ; 
+	var index = 0;
+	function start_news() {
+		// 2초 마다 뉴스를 표시 (showNews())
+		timer = setInterval(showNews,2000);
+	}
+	function showNews() {
+		var div = document.getElementById("mydiv");
+		div.innerHTML = news[index++];
+		if(index == news.length) {index = 0}
+	}
+	function stop_news() {
+		clearInterval(timer);
+	}
+</script>
+</head>
+<body>
+	<div id="mydiv"></div>
+	<button onclick="start_news()">뉴스보기</button>
+	<button onclick="stop_news()">뉴스중지</button>
+
+</body>
+</html>

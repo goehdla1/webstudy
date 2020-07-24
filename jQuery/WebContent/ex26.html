@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#movie{
+		position: absolute;
+	}
+	#close{
+		padding:30px;
+		float: right;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#close").click(function() {
+			$("#movie").css("display","none");
+		});
+	});
+</script>
+</head>
+<body style="background-color: skyblue">
+	<div id="movie" style="background-color: tomato">
+		<pre>
+		dksldfjsldflsdf
+		sdlkfsldjflsdf
+		sdflksldflsdfl;sa
+		sd;lkflsdf;ls
+		sldkfjlsjdf
+		sdfllsdjflskdf
+		sdflkjsldfj
+		</pre>
+		<img alt="" src="images/pineapple.jpg"><br>
+		<div id="close"> 닫기</div>	
+	</div>
+	<div id = "content">
+		<h2> ICT 영화관 </h2>
+		<p>
+			ICT 영화관 오시는길 <br>
+			2호선 홍대 입구 역
+		</p>
+	</div>
+</body>
+</html>

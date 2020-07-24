@@ -19,28 +19,76 @@
 #menu ul li:last-child {
 	border-left: none;
 }
+.search{
+position: relative;
+left:70%;
+padding-left: 0px;
+
+
+}
+
 </style>
 </head>
 <body>
-
 	<div id="menu">
 		<ul>
 			<li><a href="#">고객센터</a></li>
-			<li><a href="#">예매확인/취소</a></li>
 			<li><a href="#">마이페이지</a></li>
 			<li><a href="#">회원가입</a></li>
 			<li><a href="#">로그인</a></li>
 		</ul>
-		<h1 style="position: relative; top: 0px; left: 30px;">
-			<u>Knock U Want TicKet</u>
-		</h1>
-		<input type="text" value="search" name="search"
-			style="position: relative; top: 0px; right: 10px; float: right;"
-			size="60px">
 	</div>
-	
-	<div>
-		<ul></ul>
+	<h1 style="position: relative; top: 0px; left: 30px;">
+		<u>Knock U Want TicKet</u>
+	</h1>
+	<div class="search">
+		<input type="text" placeholder="search" style="width:500px;height:15px;font-size:30px;">
+		<button>검색</button>
+	</div>
+	<hr>
+	<div class="wapper">
+		<nav id="menu2">
+			<ul>
+				<li><a href="#">뮤지컬</a>
+					<ul>
+						<li><a href="#">오리지널/내한</a></li>
+						<li><a href="#">라이선스</a></li>
+						<li><a href="#">창작뮤지컬</a></li>
+						<li><a href="#">뮤지컬넌버벌 퍼포먼스</a></li>
+						<li><a href="#">패키지공연</a></li>
+					</ul></li>
+				<li><a href="#">콘서트</a>
+					<ul>
+						<li><a href="#">발라드</a></li>
+						<li><a href="#">내한공연</a></li>
+						<li><a href="#">락/메탈</a></li>
+						<li><a href="#">패스티벌</a></li>
+						<li><a href="#">랩/힙합</a></li>
+						<li><a href="#">팬클럽</a></li>
+						<li><a href="#">재즈/소울</a></li>
+						<li><a href="#">인디</a></li>
+						<li><a href="#">디너쇼</a></li>
+						<li><a href="#">토크/강연</a></li>
+						<li><a href="#">포크/트로트</a></li>
+					</ul></li>
+				<li><a href="#">연극</a></li>
+				<li><a href="#">클래식/무용</a>
+					<ul>
+						<li><a href="#">클래식</a></li>
+						<li><a href="#">오페라</a></li>
+						<li><a href="#">발레/무용</a></li>
+						<li><a href="#">국악</a></li>
+					</ul></li>
+				<li><a href="#">아동</a>
+					<ul>
+						<li><a href="#">기타</a></li>
+						<li><a href="#">뮤지컬</a></li>
+						<li><a href="#">연극</a></li>
+					</ul></li>
+				<li><a href="#" id="sub">이벤트</a></li>
+				<li><a href="#" id="sub">랭킹</a></li>
+			</ul>
+		</nav>
 	</div>
 
 </body>
