@@ -19,52 +19,56 @@
 #menu ul li:last-child {
 	border-left: none;
 }
-.search{
-position: relative;
-left:70%;
-padding-left: 0px;
 
+.search {
+	position: relative;
+	left: 70%;
+	padding-left: 0px;
 }
-#menu2{
-	position : relative;
+
+#menu2 {
+	position: relative;
 	top: -25px;
 	text-align: center;
 	font-size: 30px;
 	background-color: gray;
-}
-
-#menu2 > ul > li {
-	display: inline-block;
-	position: relative;
 	
 }
-#menu2 > ul > li > a{
+
+#menu2>ul>li {
+	display: inline-block;
+	position: relative;
+}
+
+#menu2>ul>li>a {
 	display: block;
-	padding : 10px 50px;
+	padding: 10px 50px;
 	font-weight: 600;
 	background-color: gray;
 	color: white;
 	text-decoration: none;
-	
 }
-.sub{
-	display : none;
+
+.sub {
+	display: none;
 	position: absolute;
-	left :5px;
+	left: 5px;
 	top: 60px;
 	padding: 10px 0;
 	font-size: 14px;
 	width: 100%;
 	list-style-type: none;
 	background-color: #fff;
-	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	text-align: center;
 	text-decoration: none;
 }
-#menu2 > ul > li:hover ul{
+
+#menu2>ul>li:hover ul {
 	display: block;
 }
-#menu2 ul ul a{
+
+#menu2 ul ul a {
 	display: block;
 	padding: 10px 10px;
 	text-align: center;
@@ -72,11 +76,68 @@ padding-left: 0px;
 	border-top: 1px solid #eaeaea;
 }
 
+.main {
+	border: solid 1px black;
+	padding: 30px;
+	background-color: silver;
+	position: relative;
+	top: -40px;
+}
+
+.main>video, h3, p {
+	margin: 0 auto;
+}
+
+#text1 {
+	position: relative;
+	left: 280px;
+	top: 15px;
+}
+
+.main2 {
+	margin: 0 auto;
+	width: 90%;
+	height: 40%;
+}
+
+.main2>#sub1 {
+	border: solid 1px white;
+	width: 70%;
+	height: 300px;
+	margin: auto;
+}
+
+#sub2-1, #sub2-2, #sub2-3 {
+	border: solid 1px white;
+	width: 30%;
+	height: 170px;
+	float: left;
+	margin-left: 55px;
+	width: 30%;
+}
+
+#sub3-1 {
+	margin: 0px auto;
+	text-align: center;
+}
+
+.main3>div {
+	text-align: center;
+	margin: 0 auto;
+	margin-left: 80px;
+}
+
+#sub4-1, #sub4-2 {
+	border: solid 1px white;
+	width: 70%;
+	height: 300px;
+	margin: auto;
+}
+
+
 </style>
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-  />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 
 </head>
 <body>
@@ -88,20 +149,21 @@ padding-left: 0px;
 			<li><a href="#">로그인</a></li>
 		</ul>
 	</div>
-	
+
 	<div style="position: relative; top: 0px; left: 30px;">
-	<h1>
-		<u>Knock U Want TicKet</u>
-	</h1>
+		<h1>
+			<u>Knock U Want TicKet</u>
+		</h1>
 	</div>
-	
+
 	<div class="search">
-		<input type="text" placeholder="search" style="width:500px;height:15px;font-size:30px;">
+		<input type="text" placeholder="search"
+			style="width: 500px; height: 15px; font-size: 30px;">
 		<button>검색</button>
 	</div>
-	
+
 	<hr>
-	
+
 	<div class="wapper">
 		<nav id="menu2">
 			<ul>
@@ -143,14 +205,286 @@ padding-left: 0px;
 						<li><a href="#">연극</a></li>
 					</ul></li>
 				<li><a href="#" style="font-size: 20px; color: black;">이벤트</a></li>
-				<li><a href="#" style="font-size: 20px; padding:0; margin:0 ; color: black;">랭킹</a></li>
+				<li><a href="#"
+					style="font-size: 20px; padding: 0; margin: 0; color: black;">랭킹</a></li>
 				<i class="fas fa-home"></i>
 				<i class="fas fa-star"></i>
-				<input type="button"><i class="fas fa-map-marker-alt"></i>
-			
+				<i class="fas fa-map-marker-alt"></i>
+
 			</ul>
 		</nav>
 	</div>
+	<div class="main">
+		<center>
+			<video width="700" height="400" controls autoplay>
+				<source src="" type="">
+				<source src="" type="">
+			</video>
+			<br>
+			<div id="text1">
+				<h3>
+					뮤지컬
+					<레베카>
+				</h3>
+				<p>2019.11.16 ~ 2020.03.15</p>
+				<p>충무아트센터 대극장</p>
+			</div>
+		</center>
+	</div>
+	<div class="main2">
+		<h1 style="color: red; text-align: center;">오늘의 추천</h1>
+		<br> <br> <br>
+		<div id="sub1" style="width: 70%; height: 40%">
+			<img src="images/images.png" alt="모차르트"
+				style="float: left; width: 500px; height: 250px; margin-right: 50px;">
+			<h1>
+				모차르트
+				<뮤지컬>
+			</h1>
+			<p>1768년 빈의 한 귀족 저택. 잘츠부르크 궁중 지휘자인 레오폴드 모차르트는 자리에 모인 귀족들에게 자신의 다섯
+				살 난 아들 볼프강 아마데의 피아노 연주를 들려주며 그의 뛰어난 음악적 재능을 소개하고 있다. 그의 연주를 돕던 누나
+				난네가 볼프강이 아픈 것 같다고 얘기하지만 레오폴드는 ‘기적의 아이’ 볼프강의 후견인을 모으기에만 열중할 뿐이다. 그로부터
+				9년 후. 청년이 된 볼프강은 아버지의 뜻에 따라 잘츠부르크의 영주인 콜로레도 대주교의 지배하에 음악 활동을 하고 있다.
+				‘기적의 아이’라 불리던 어린 시절의 분신인 ‘아마데’가 그의 곁을 따라다니면서 작곡 일에 심취할 수 있도록 돕고 있다.
+				대주교가 요청한 음악을 쓰는 일이 지겨워진 볼프강은 자유를 갈구하게 되고, ‘대주교의 말을 거스르지 말라’는 아버지의
+				의견과 충돌하기에 이르는데..</p>
+			<button
+				style="position: relative; left: 50%; padding: 10px; font-size: 20px; width:" >예매하기</button>
+		</div>
+		<br> <br>
+		<div id="sub2">
+			<div id="sub2-1" style="float: left;">
+				<img src="images/images.png" alt="??"
+					style="float: left; margin-right: 10px; width: 300px; height: 170px;">
+				<h2>제목</h2>
+				<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇdddddddddddddddddddddddddddddddddddd</p>
+				<button style="position: relative; left: 40%; top: 10px;">예매하기</button>
+			</div>
+			<div id="sub2-2" style="float: left;">
+				<img src="images/images.png" alt="??"
+					style="float: left; margin-right: 10px; width: 300px; height: 170px;">
+				<h2>제목</h2>
+				<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇdddddddddddddddddddddddddddddddddddd</p>
+				<button style="position: relative; left: 40%; top: 10px;">예매하기</button>
+			</div>
+			<div id="sub2-3" style="float: left;">
+				<img src="images/images.png" alt="??"
+					style="float: left; margin-right: 10px; width: 300px; height: 170px;">
+				<h2>제목</h2>
+				<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇdddddddddddddddddddddddddddddddddddd</p>
+				<button style="position: relative; left: 40%; top: 10px;">예매하기</button>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<hr>
+	<br>
+	<br>
+	<div id="sub3-1"
+		style="width: 500px; border-bottom: 1px solid black; text-align: center;">
+		<h1>뮤지컬</h1>
+		<button style="position: relative; left: 190px; top: -10px;">전체
+			보기</button>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<div class="main3" style="width: 90%; height: 40%;">
+		<div style="float: left; margin-left: 290px;">
+			<img src="images/images.png" alt="??"
+				style="width: 300px; height: 350px;">
+			<h2>제목</h2>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<button style="position: relative; left: 120px; top: 10px;">예매하기</button>
+		</div>
+
+		<div style="float: left;">
+			<img src="images/images.png" alt="??"
+				style="width: 300px; height: 350px;">
+			<h2>제목</h2>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<button style="position: relative; left: 120px; top: 10px;">예매하기</button>
+		</div>
+		<div style="float: left;">
+			<img src="images/images.png" alt="??"
+				style="width: 300px; height: 350px;">
+			<h2>제목</h2>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<button style="position: relative; left: 120px; top: 10px;">예매하기</button>
+		</div>
+		<div style="float: left;">
+			<img src="images/images.png" alt="??"
+				style="width: 300px; height: 350px;">
+			<h2>제목</h2>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<button style="position: relative; left: 120px; top: 10px;">예매하기</button>
+		</div>
+
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+
+	<hr>
+	<br>
+	<br>
+	<br>
+	<div id="sub3-1"
+		style="width: 500px; border-bottom: 1px solid black; text-align: center;">
+		<h1>콘서트</h1>
+		<button style="position: relative; left: 190px; top: -10px;">전체
+			보기</button>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<div style="width: 90%; height: 60%">
+	<div id="sub4-1">
+		<video width="500px" height="250px;" controls autoplay
+			style="margin-right: 50px; float: left;">
+			<source src="" type="">
+			<source src="" type="">
+		</video>
+		<h1>
+			모차르트
+			<콘서트>
+		</h1>
+		<button style="position: relative; left: 50%; top: -10px;">예매하기</button>
+		<p>1768년 빈의 한 귀족 저택. 잘츠부르크 궁중 지휘자인 레오폴드 모차르트는 자리에 모인 귀족들에게 자신의 다섯
+			살 난 아들 볼프강 아마데의 피아노 연주를 들려주며 그의 뛰어난 음악적 재능을 소개하고 있다. 그의 연주를 돕던 누나 난네가
+			볼프강이 아픈 것 같다고 얘기하지만 레오폴드는 ‘기적의 아이’ 볼프강의 후견인을 모으기에만 열중할 뿐이다. 그로부터 9년
+			후. 청년이 된 볼프강은 아버지의 뜻에 따라 잘츠부르크의 영주인 콜로레도 대주교의 지배하에 음악 활동을 하고 있다. ‘기적의
+			아이’라 불리던 어린 시절의 분신인 ‘아마데’가 그의 곁을 따라다니면서 작곡 일에 심취할 수 있도록 돕고 있다. 대주교가
+			요청한 음악을 쓰는 일이 지겨워진 볼프강은 자유를 갈구하게 되고, ‘대주교의 말을 거스르지 말라’는 아버지의 의견과
+			충돌하기에 이르는데..</p>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div id="sub4-2">
+		<video width="500px" height="250px;" controls autoplay
+			style="margin-right: 50px; float: left;">
+			<source src="" type="">
+			<source src="" type="">
+		</video>
+		<h1>
+			모차르트
+			<콘서트>
+		</h1>
+		<button style="position: relative; left: 50%; top: -10px;">예매하기</button>
+		<p>1768년 빈의 한 귀족 저택. 잘츠부르크 궁중 지휘자인 레오폴드 모차르트는 자리에 모인 귀족들에게 자신의 다섯
+			살 난 아들 볼프강 아마데의 피아노 연주를 들려주며 그의 뛰어난 음악적 재능을 소개하고 있다. 그의 연주를 돕던 누나 난네가
+			볼프강이 아픈 것 같다고 얘기하지만 레오폴드는 ‘기적의 아이’ 볼프강의 후견인을 모으기에만 열중할 뿐이다. 그로부터 9년
+			후. 청년이 된 볼프강은 아버지의 뜻에 따라 잘츠부르크의 영주인 콜로레도 대주교의 지배하에 음악 활동을 하고 있다. ‘기적의
+			아이’라 불리던 어린 시절의 분신인 ‘아마데’가 그의 곁을 따라다니면서 작곡 일에 심취할 수 있도록 돕고 있다. 대주교가
+			요청한 음악을 쓰는 일이 지겨워진 볼프강은 자유를 갈구하게 되고, ‘대주교의 말을 거스르지 말라’는 아버지의 의견과
+			충돌하기에 이르는데..</p>
+	</div>
+	</div>
+	<br>
+
+
+
+	<hr>
+	<br>
+	<br>
+	<br>
+	<div id="sub3-1"
+		style="width: 500px; border-bottom: 1px solid black; text-align: center;">
+		<h1>연극</h1>
+		<button style="position: relative; left: 190px; top: -10px;">전체
+			보기</button>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<div class="main5" style="width: 70% ; height: 40%;">
+		<div id="" style="width:35%; height: 25%; margin-left: 54%;">
+			<img src="images/images.png" alt="??"
+				style="float: left; margin-right: 50px; width: 300px; height: 350px;">
+			<h2>제목</h2>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<p>ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+			<button style="position: relative; left: 17%; top: 25px;">예매하기</button>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<br>
+	<br>
+	<br>
+	<div id="sub3-1"
+		style="width: 500px; border-bottom: 1px solid black; text-align: center;">
+		<h1>클래식/무용</h1>
+		<button style="position: relative; left: 190px; top: -10px;">전체
+			보기</button>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<div></div>
 
 </body>
 </html>
