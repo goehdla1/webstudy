@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+
 #menu ul li {
 	float: right;
 	list-style-type: none;
@@ -14,25 +15,6 @@
 	position: relative;
 	top: 0px;
 	right: 50px;
-}
-#div2 ul li {
-	float: right;
-	list-style-type: none;
-	padding-left: 0px;
-	border-left: 1px solid black;
-	padding: 0px 10px 0px 10px;
-}
-#div2{
-	width: 400px;
-	height: 100px;
-	margin:  0 auto;
-	position: relative;
-	top: 30px;
-	right: 70px;
-	
-}
-#div2 ul li:last-child {
-	border-left: none;
 }
 
 #menu ul li:last-child {
@@ -96,44 +78,69 @@
 	border-top: 1px solid #eaeaea;
 }
 
-#btng ,#btn1 , #btn2{
-	margin: 0 auto;
-	text-align: center;
-}
-#btn1{
-	margin-right: -7px;
-}
-#btn1,#btn2{
-	padding: 6px 50px;
-	font-size: 20px;
-}
-#btng button{
-	background: white;
-	border: 1px solid black;
-}
-#btng button:hover{
-	background: skyblue;
+.main {
+	border: solid 1px black;
+	padding: 30px;
+	background-color: silver;
+	position: relative;
+	top: -40px;
 }
 
-#div1,#f1,#i1,#i2{
+.main>video, h3, p {
 	margin: 0 auto;
-	text-align: center;
-	background-color: lightsilver;
-	margin-top: 10px;	
 }
 
-#i1,#i2{
-	padding: 7px 150px; 
+#text1 {
+	position: relative;
+	left: 280px;
+	top: 15px;
+}
+
+.main2 {
+	margin: 0 auto;
+	width: 90%;
+	height: 40%;
+}
+
+.main2>#sub1 {
+	border: solid 1px white;
+	width: 70%;
+	height: 300px;
+	margin: auto;
+}
+
+#sub2-1, #sub2-2, #sub2-3 {
+	border: solid 1px white;
+	width: 30%;
+	height: 170px;
+	float: left;
+	margin-left: 45px;
+	width: 30%;
+}
+
+#sub3-1 {
+	margin: 0px auto;
 	text-align: center;
-	border: 1px solid black;
 }
-#btn3{
-	border: 1px solid black;
-	background-color: red;
-	padding: 4px 60px;
-	font-size: 20px;
-	color: white;
+
+.main3>div {
+	text-align: center;
+	margin: 0 auto;
+	margin-left: 80px;
 }
+
+#sub4-1, #sub4-2 {
+	border: solid 1px white;
+	width: 70%;
+	height: 300px;
+	margin: auto;
+}
+table,tr,td{
+border:  1px solid black;}
+}
+
+	
+
 
 
 
@@ -175,7 +182,7 @@
 						<li><a href="#">오리지널/내한</a></li>
 						<li><a href="#">라이선스</a></li>
 						<li><a href="#">창작뮤지컬</a></li>
-						<li><a href="#">뮤지컬넌버벌<br> 퍼포먼스</a></li>
+						<li><a href="#">뮤지컬넌버벌 <br>퍼포먼스</a></li>
 						<li><a href="#">패키지공연</a></li>
 					</ul></li>
 				<li><a href="#">콘서트</a>
@@ -216,64 +223,87 @@
 			</ul>
 		</nav>
 	</div>
-	
-	<div style="width: 50%; height: 50%; border: 1px solid black; background-color:silver; margin: 0 auto;">
-		<br><br>
-		<h2 style="text-align: center; font-size: 40px; text-decoration: underline;">회원 로그인 </h2>
-		<div id="btng" style="margin-bottom: 40px;">
-			<button id="btn1">회원 로그인</button>
-			<button id="btn2">비회원 로그인</button>
-		</div>
+	<table style="width: 100% ;">
+		<tr style="text-align: center;">
+		<td style="width: 100px; border-color: silver; background-color: lightyellow;"><a href="" style="font-size: 50px; text-decoration: none; color: black;">뮤지컬</a></td>
+		<td style="width: 100px;border-color: silver; background-color: lightyellow;"><a href="" style="font-size: 50px; text-decoration: none;  color: black;">콘서트</a></td>
+		<td style="width: 100px;border-color: silver; background-color: lightyellow;"><a href="" style="font-size: 50px; text-decoration: none;  color: black;">연극</a></td>
+		<td style="width: 100px;border-color: silver; background-color: lightyellow;"><a href="" style="font-size: 50px; text-decoration: none;  color: black;">클래식/무용</a></td>
+		<td style="width: 100px;border-color: silver; background-color: lightyellow;"><a href="" style="font-size: 50px; text-decoration: none;  color: black;">아동</a></td>
 		
-		<div id="div1">
-		<form id="f1" action="" method="post" style="margin-bottom: 50px;">
-		<input id="i1" type="text" name="id" placeholder="아이디를 입력해주세요." ><br>
-		<input id="i2" type="password" name="pw" placeholder="비밀번호를 입력해주세요.">
-		</form>
-		<button id="btn3">로그인</button>
-		</div>
-		<div id="div2" style="font-size: 14px;">
-		<ul>
-			<li><a href="#">회원가입</a></li>
-			<li><a href="#">비밀번호 찾기</a></li>
-			<li><a href="#">아이디 찾기</a></li>
-			
-		</ul>
-		
-	</div>
-		
-	</div>
+		</tr>
+
+	</table>
+	<br><br><br>
 	<br>
+		<h1 style="text-align: center; ">2020년 09월 01일 (화) 00:00 ~ 23:00<button style="margin-left: 1%;"><i class="fas fa-calendar" style="font-size: 32px;"></i></button></h1>
+		
+	
+	<br>
+	<br>
+	<table style="width: 75%; text-align: center; border-collapse: collapse; margin: 0 auto;">
+		<thead style="background-color: silver;">
+			<tr style="font-size: 23px;">
+				<td>No</td>
+				<td colspan="2">공연상품</td>
+				<td>기간</td>
+				<td>점유율</td>
+			</tr>
+		</thead>
+		<tbody>
+				<tr>
+				<td><p style="font-size: 22px;">1</p></td>
+				<td style="width: 22%;"><img src="images/겨울왕국.jpg" alt="??" style="width: 60%; height: 30%; margin: 16px 0;"></td>
+				<td style="text-align: left; width: 40%"><h1 style="display: inline-block; margin-left: 3%; font-size: 28px;"><a href="" style="text-decoration: none;">겨울왕국</a></h1>
+					<p style="color: black; margin-left: 6%; font-size: 15px;">동화속 같은 아름다운 무대, 환상의 겨울왕국으로 초대합니다!</p>
+				</td>
+				<td><p style="font-size: 15px;">2020.07.20 ~ 2020.08.31</p></td>
+				<td style="width: 7%;"></td>
+			</tr>
+				<tr>
+				<td><p style="font-size: 22px;">1</p></td>
+				<td style="width: 22%;"><img src="images/겨울왕국.jpg" alt="??" style="width: 60%; height: 30%; margin: 16px 0;"></td>
+				<td style="text-align: left; width: 40%"><h1 style="display: inline-block; margin-left: 3%; font-size: 28px;"><a href="" style="text-decoration: none;">겨울왕국</a></h1>
+					<p style="color: black; margin-left: 6%; font-size: 15px;">동화속 같은 아름다운 무대, 환상의 겨울왕국으로 초대합니다!</p>
+				</td>
+				<td><p style="font-size: 15px;">2020.07.20 ~ 2020.08.31</p></td>
+				<td style="width: 7%;"></td>
+			</tr>
+			
+			
+		</tbody>
+	</table>
+	<br><br>
 	<br>
 	<hr>
 	<br>
-	<table style="width: 90%; margin: 0 auto;">
+	<table style="width: 90%; margin: 0 auto; border: none;">
 	<tr>
-	<td  style=" text-align: center ; width: 20%;">
+	<td  style=" text-align: center ; width: 20%; border: none;">
 	<i class="fas fa-credit-card" style="font-size: 90px;"></i>
 	<br>
 	<br>
-	<p style="font-size: 20px; text-align: center;">제휴/할인카드</p>
+	<p style="font-size: 20px; text-align: center; ">제휴/할인카드</p>
 	</td>
-	<td  style=" text-align: center;  width: 20%;">
+	<td  style=" text-align: center;  width: 20%; border: none;">
 	<i class="fas fa-check-square" style="font-size: 90px;"></i>
 	<br>
 	<br>
 	<p style="font-size: 20px; text-align: center;">이용안내</p>
 	</td>
-	<td  style=" text-align: center;  width: 20%;">
+	<td  style=" text-align: center;  width: 20%; border: none;">
 	<i class="fas fa-gift" style="font-size: 90px;"></i>
 	<br>
 	<br>
 	<p style="font-size: 20px; text-align: center;">이벤트/쿠폰</p>
 	</td>
-	<td  style=" text-align: center;  width: 20%;">
+	<td  style=" text-align: center;  width: 20%; border: none;" >
 	<i class="fas fa-question" style="font-size: 90px;"></i>
 	<br>
 	<br>
 	<p style="font-size: 20px; text-align: center;">FAQ</p>
 	</td>
-	<td style=" text-align: center;  width: 20%;">
+	<td style=" text-align: center;  width: 20%; border: none;">
 	<i class="fas fa-robot" style="font-size: 90px;"></i>
 	<br>
 	<br>
